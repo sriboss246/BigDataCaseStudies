@@ -1,0 +1,3244 @@
+{
+  "type" : "record",
+  "name" : "type0",
+  "fields" : [ {
+    "name" : "Interchange_Control_Header",
+    "type" : {
+      "type" : "record",
+      "name" : "type1",
+      "fields" : [ {
+        "name" : "Authorization_Information_Qualifier",
+        "type" : [ "null", "string" ],
+        "source" : "element Authorization_Information_Qualifier"
+      }, {
+        "name" : "Authorization_Information",
+        "type" : [ "null", "string" ],
+        "source" : "element Authorization_Information"
+      }, {
+        "name" : "Security_Information_Qualifier",
+        "type" : [ "null", "string" ],
+        "source" : "element Security_Information_Qualifier"
+      }, {
+        "name" : "Security_Information",
+        "type" : [ "null", "string" ],
+        "source" : "element Security_Information"
+      }, {
+        "name" : "Interchange_Sender_ID_Qualifier",
+        "type" : [ "null", "string" ],
+        "source" : "element Interchange_Sender_ID_Qualifier"
+      }, {
+        "name" : "Interchange_Sender_ID",
+        "type" : [ "null", "string" ],
+        "source" : "element Interchange_Sender_ID"
+      }, {
+        "name" : "Interchange_Receiver_ID_Qualifier",
+        "type" : [ "null", "string" ],
+        "source" : "element Interchange_Receiver_ID_Qualifier"
+      }, {
+        "name" : "Interchange_Receiver_ID",
+        "type" : [ "null", "string" ],
+        "source" : "element Interchange_Receiver_ID"
+      }, {
+        "name" : "Interchange_Date",
+        "type" : [ "null", "string" ],
+        "source" : "element Interchange_Date"
+      }, {
+        "name" : "Interchange_Time",
+        "type" : [ "null", "string" ],
+        "source" : "element Interchange_Time"
+      }, {
+        "name" : "Interchange_Control_Standards_Identifier",
+        "type" : [ "null", "string" ],
+        "source" : "element Interchange_Control_Standards_Identifier"
+      }, {
+        "name" : "Interchange_Control_Version_Number",
+        "type" : [ "null", "string" ],
+        "source" : "element Interchange_Control_Version_Number"
+      }, {
+        "name" : "Interchange_Control_Number",
+        "type" : [ "null", "long" ],
+        "source" : "element Interchange_Control_Number"
+      }, {
+        "name" : "Acknowledgment_Requested",
+        "type" : [ "null", "string" ],
+        "source" : "element Acknowledgment_Requested"
+      }, {
+        "name" : "Usage_Indicator",
+        "type" : [ "null", "string" ],
+        "source" : "element Usage_Indicator"
+      }, {
+        "name" : "Component_Element_Separator",
+        "type" : [ "null", "string" ],
+        "source" : "element Component_Element_Separator"
+      } ]
+    },
+    "source" : "element Interchange_Control_Header"
+  }, {
+    "name" : "Interchange_Acknowledgement",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "type2",
+        "fields" : [ {
+          "name" : "Interchange_Control_Number",
+          "type" : [ "null", "long" ],
+          "source" : "element Interchange_Control_Number"
+        }, {
+          "name" : "Interchange_Date",
+          "type" : [ "null", "string" ],
+          "source" : "element Interchange_Date"
+        }, {
+          "name" : "Interchange_Time",
+          "type" : [ "null", "string" ],
+          "source" : "element Interchange_Time"
+        }, {
+          "name" : "Interchange_Acknowledgement_Code",
+          "type" : [ "null", "string" ],
+          "source" : "element Interchange_Acknowledgement_Code"
+        }, {
+          "name" : "Interchange_Note_Code",
+          "type" : [ "null", "string" ],
+          "source" : "element Interchange_Note_Code"
+        } ]
+      }
+    },
+    "source" : "element Interchange_Acknowledgement"
+  }, {
+    "name" : "Functional_Group_Header",
+    "type" : {
+      "type" : "record",
+      "name" : "type3",
+      "fields" : [ {
+        "name" : "Functional_Identifier_Code",
+        "type" : [ "null", "string" ],
+        "source" : "element Functional_Identifier_Code"
+      }, {
+        "name" : "Application_Sender_Code",
+        "type" : [ "null", "string" ],
+        "source" : "element Application_Sender_Code"
+      }, {
+        "name" : "Application_Receiver_Code",
+        "type" : [ "null", "string" ],
+        "source" : "element Application_Receiver_Code"
+      }, {
+        "name" : "Date",
+        "type" : [ "null", "string" ],
+        "source" : "element Date"
+      }, {
+        "name" : "Time",
+        "type" : [ "null", "string" ],
+        "source" : "element Time"
+      }, {
+        "name" : "Group_Control_Number",
+        "type" : [ "null", "long" ],
+        "source" : "element Group_Control_Number"
+      }, {
+        "name" : "Responsible_Agency_Code",
+        "type" : [ "null", "string" ],
+        "source" : "element Responsible_Agency_Code"
+      }, {
+        "name" : "Version_Release_Industry_Identifier_Code",
+        "type" : [ "null", "string" ],
+        "source" : "element Version_Release_Industry_Identifier_Code"
+      } ]
+    },
+    "source" : "element Functional_Group_Header"
+  }, {
+    "name" : "Transaction_Set_Header",
+    "type" : {
+      "type" : "record",
+      "name" : "type4",
+      "fields" : [ {
+        "name" : "Transaction_Set_Identifier_Code",
+        "type" : [ "null", "string" ],
+        "source" : "element Transaction_Set_Identifier_Code"
+      }, {
+        "name" : "Transaction_Set_Control_Number",
+        "type" : [ "null", "string" ],
+        "source" : "element Transaction_Set_Control_Number"
+      } ]
+    },
+    "source" : "element Transaction_Set_Header"
+  }, {
+    "name" : "Beginning_of_Hierarchical_Transaction",
+    "type" : {
+      "type" : "record",
+      "name" : "type5",
+      "fields" : [ {
+        "name" : "Hierarchical_Structure_Code",
+        "type" : [ "null", "string" ],
+        "source" : "element Hierarchical_Structure_Code"
+      }, {
+        "name" : "Transaction_Set_Purpose_Code",
+        "type" : [ "null", "string" ],
+        "source" : "element Transaction_Set_Purpose_Code"
+      }, {
+        "name" : "Reference_Identification",
+        "type" : [ "null", "string" ],
+        "source" : "element Reference_Identification"
+      }, {
+        "name" : "Date",
+        "type" : [ "null", "string" ],
+        "source" : "element Date"
+      }, {
+        "name" : "Time",
+        "type" : [ "null", "string" ],
+        "source" : "element Time"
+      }, {
+        "name" : "Transaction_Type_Code",
+        "type" : [ "null", "string" ],
+        "source" : "element Transaction_Type_Code"
+      } ]
+    },
+    "source" : "element Beginning_of_Hierarchical_Transaction"
+  }, {
+    "name" : "Transmission_Type_Identification",
+    "type" : {
+      "type" : "record",
+      "name" : "type6",
+      "fields" : [ {
+        "name" : "Reference_Identification_Qualifier",
+        "type" : [ "null", "string" ],
+        "source" : "element Reference_Identification_Qualifier"
+      }, {
+        "name" : "Reference_Identification",
+        "type" : [ "null", "string" ],
+        "source" : "element Reference_Identification"
+      } ]
+    },
+    "source" : "element Transmission_Type_Identification"
+  }, {
+    "name" : "L1000A",
+    "type" : {
+      "type" : "record",
+      "name" : "type7",
+      "fields" : [ {
+        "name" : "Submitter_Name",
+        "type" : {
+          "type" : "record",
+          "name" : "type8",
+          "fields" : [ {
+            "name" : "Entity_Identifier_Code",
+            "type" : [ "null", "string" ],
+            "source" : "element Entity_Identifier_Code"
+          }, {
+            "name" : "Entity_Type_Qualifier",
+            "type" : [ "null", "string" ],
+            "source" : "element Entity_Type_Qualifier"
+          }, {
+            "name" : "Name_Last_Organization_Name",
+            "type" : [ "null", "string" ],
+            "source" : "element Name_Last_Organization_Name"
+          }, {
+            "name" : "Name_First",
+            "type" : [ "null", "string" ],
+            "source" : "element Name_First"
+          }, {
+            "name" : "Name_Middle",
+            "type" : [ "null", "string" ],
+            "source" : "element Name_Middle"
+          }, {
+            "name" : "Identification_Code_Qualifier",
+            "type" : [ "null", "string" ],
+            "source" : "element Identification_Code_Qualifier"
+          }, {
+            "name" : "Identification_Code",
+            "type" : [ "null", "string" ],
+            "source" : "element Identification_Code"
+          } ]
+        },
+        "source" : "element Submitter_Name"
+      }, {
+        "name" : "Submitter_EDI_Contact_Information",
+        "type" : {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "type9",
+            "fields" : [ {
+              "name" : "Contact_Function_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Contact_Function_Code"
+            }, {
+              "name" : "Name",
+              "type" : [ "null", "string" ],
+              "source" : "element Name"
+            }, {
+              "name" : "Communication_Number_Qualifier",
+              "type" : [ "null", "string" ],
+              "source" : "element Communication_Number_Qualifier"
+            }, {
+              "name" : "Communication_Number",
+              "type" : [ "null", "string" ],
+              "source" : "element Communication_Number"
+            }, {
+              "name" : "Communication_Number_Qualifier_2",
+              "type" : [ "null", "string" ],
+              "source" : "element Communication_Number_Qualifier_2"
+            }, {
+              "name" : "Communication_Number_2",
+              "type" : [ "null", "string" ],
+              "source" : "element Communication_Number_2"
+            }, {
+              "name" : "Communication_Number_Qualifier_3",
+              "type" : [ "null", "string" ],
+              "source" : "element Communication_Number_Qualifier_3"
+            }, {
+              "name" : "Communication_Number_3",
+              "type" : [ "null", "string" ],
+              "source" : "element Communication_Number_3"
+            } ]
+          }
+        },
+        "source" : "element Submitter_EDI_Contact_Information"
+      } ]
+    },
+    "source" : "element L1000A"
+  }, {
+    "name" : "L1000B",
+    "type" : {
+      "type" : "record",
+      "name" : "type10",
+      "fields" : [ {
+        "name" : "Receiver_Name",
+        "type" : {
+          "type" : "record",
+          "name" : "type11",
+          "fields" : [ {
+            "name" : "Entity_Identifier_Code",
+            "type" : [ "null", "string" ],
+            "source" : "element Entity_Identifier_Code"
+          }, {
+            "name" : "Entity_Type_Qualifier",
+            "type" : [ "null", "string" ],
+            "source" : "element Entity_Type_Qualifier"
+          }, {
+            "name" : "Name_Organization_Name",
+            "type" : [ "null", "string" ],
+            "source" : "element Name_Organization_Name"
+          }, {
+            "name" : "Identification_Code_Qualifier",
+            "type" : [ "null", "string" ],
+            "source" : "element Identification_Code_Qualifier"
+          }, {
+            "name" : "Identification_Code",
+            "type" : [ "null", "string" ],
+            "source" : "element Identification_Code"
+          } ]
+        },
+        "source" : "element Receiver_Name"
+      } ]
+    },
+    "source" : "element L1000B"
+  }, {
+    "name" : "L2000A",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "type12",
+        "fields" : [ {
+          "name" : "Billing_Pay_to_Provider_Hierarchical_Level",
+          "type" : {
+            "type" : "record",
+            "name" : "type13",
+            "fields" : [ {
+              "name" : "Hierarchical_ID_Number",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_ID_Number"
+            }, {
+              "name" : "Hierarchical_Level_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_Level_Code"
+            }, {
+              "name" : "Hierarchical_Child_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_Child_Code"
+            } ]
+          },
+          "source" : "element Billing_Pay-to_Provider_Hierarchical_Level"
+        }, {
+          "name" : "Billing_Pay_to_Provider_Specialty_Information",
+          "type" : [ "null", {
+            "type" : "record",
+            "name" : "type14",
+            "fields" : [ {
+              "name" : "Provider_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Provider_Code"
+            }, {
+              "name" : "Reference_Identification_Qualifier",
+              "type" : [ "null", "string" ],
+              "source" : "element Reference_Identification_Qualifier"
+            }, {
+              "name" : "Reference_Identification",
+              "type" : [ "null", "string" ],
+              "source" : "element Reference_Identification"
+            } ]
+          } ],
+          "source" : "element Billing_Pay-to_Provider_Specialty_Information"
+        }, {
+          "name" : "L2010AA",
+          "type" : {
+            "type" : "record",
+            "name" : "type15",
+            "fields" : [ {
+              "name" : "Billing_Provider_Name",
+              "type" : {
+                "type" : "record",
+                "name" : "type16",
+                "fields" : [ {
+                  "name" : "Entity_Identifier_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Entity_Identifier_Code"
+                }, {
+                  "name" : "Entity_Type_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Entity_Type_Qualifier"
+                }, {
+                  "name" : "Name_Last_Organization_Name",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Last_Organization_Name"
+                }, {
+                  "name" : "Name_First",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_First"
+                }, {
+                  "name" : "Name_Middle",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Middle"
+                }, {
+                  "name" : "Name_Suffix",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Suffix"
+                }, {
+                  "name" : "Identification_Code_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Identification_Code_Qualifier"
+                }, {
+                  "name" : "Identification_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Identification_Code"
+                } ]
+              },
+              "source" : "element Billing_Provider_Name"
+            }, {
+              "name" : "Billing_Provider_Address",
+              "type" : {
+                "type" : "record",
+                "name" : "type17",
+                "fields" : [ {
+                  "name" : "Address_Information",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Address_Information"
+                }, {
+                  "name" : "Address_Information_2",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Address_Information_2"
+                } ]
+              },
+              "source" : "element Billing_Provider_Address"
+            }, {
+              "name" : "Billing_Provider_City_State_ZIP_Code",
+              "type" : {
+                "type" : "record",
+                "name" : "type18",
+                "fields" : [ {
+                  "name" : "City_Name",
+                  "type" : [ "null", "string" ],
+                  "source" : "element City_Name"
+                }, {
+                  "name" : "State_Province_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element State_Province_Code"
+                }, {
+                  "name" : "Postal_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Postal_Code"
+                }, {
+                  "name" : "Country_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Country_Code"
+                } ]
+              },
+              "source" : "element Billing_Provider_City_State_ZIP_Code"
+            }, {
+              "name" : "Billing_Provider_Secondary_Identification",
+              "type" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "record",
+                  "name" : "type19",
+                  "fields" : [ {
+                    "name" : "Reference_Identification_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Reference_Identification_Qualifier"
+                  }, {
+                    "name" : "Reference_Identification",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Reference_Identification"
+                  } ]
+                }
+              },
+              "source" : "element Billing_Provider_Secondary_Identification"
+            } ]
+          },
+          "source" : "element L2010AA"
+        } ]
+      }
+    },
+    "source" : "element L2000A"
+  }, {
+    "name" : "L2000B",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "type20",
+        "fields" : [ {
+          "name" : "Subscriber_Hierarchical_Level",
+          "type" : {
+            "type" : "record",
+            "name" : "type21",
+            "fields" : [ {
+              "name" : "Hierarchical_ID_Number",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_ID_Number"
+            }, {
+              "name" : "Hierarchical_Parent_ID_Number",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_Parent_ID_Number"
+            }, {
+              "name" : "Hierarchical_Level_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_Level_Code"
+            }, {
+              "name" : "Hierarchical_Child_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_Child_Code"
+            } ]
+          },
+          "source" : "element Subscriber_Hierarchical_Level"
+        }, {
+          "name" : "Subscriber_Information",
+          "type" : {
+            "type" : "record",
+            "name" : "type22",
+            "fields" : [ {
+              "name" : "Payer_Responsibility_Sequence_Number_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Payer_Responsibility_Sequence_Number_Code"
+            }, {
+              "name" : "Individual_Relationship_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Individual_Relationship_Code"
+            }, {
+              "name" : "Reference_Identification",
+              "type" : [ "null", "string" ],
+              "source" : "element Reference_Identification"
+            }, {
+              "name" : "Claim_Filing_Indicator_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Claim_Filing_Indicator_Code"
+            } ]
+          },
+          "source" : "element Subscriber_Information"
+        }, {
+          "name" : "Patient_Information",
+          "type" : [ "null", {
+            "type" : "record",
+            "name" : "type23",
+            "fields" : [ {
+              "name" : "Date_Time_Period_Format_Qualifier",
+              "type" : [ "null", "string" ],
+              "source" : "element Date_Time_Period_Format_Qualifier"
+            }, {
+              "name" : "Date_Time_Period",
+              "type" : [ "null", "string" ],
+              "source" : "element Date_Time_Period"
+            }, {
+              "name" : "Unit_Basis_for_Measurement_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Unit_Basis_for_Measurement_Code"
+            }, {
+              "name" : "Weight",
+              "type" : [ "null", "double" ],
+              "source" : "element Weight"
+            }, {
+              "name" : "Condition_Response_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Condition_Response_Code"
+            } ]
+          } ],
+          "source" : "element Patient_Information"
+        }, {
+          "name" : "L2010BA",
+          "type" : {
+            "type" : "record",
+            "name" : "type24",
+            "fields" : [ {
+              "name" : "Subscriber_Name",
+              "type" : {
+                "type" : "record",
+                "name" : "type25",
+                "fields" : [ {
+                  "name" : "Entity_Identifier_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Entity_Identifier_Code"
+                }, {
+                  "name" : "Entity_Type_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Entity_Type_Qualifier"
+                }, {
+                  "name" : "Name_Last_Organization_Name",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Last_Organization_Name"
+                }, {
+                  "name" : "Name_First",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_First"
+                }, {
+                  "name" : "Name_Middle",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Middle"
+                }, {
+                  "name" : "Name_Suffix",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Suffix"
+                }, {
+                  "name" : "Identification_Code_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Identification_Code_Qualifier"
+                }, {
+                  "name" : "Identification_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Identification_Code"
+                } ]
+              },
+              "source" : "element Subscriber_Name"
+            }, {
+              "name" : "Subscriber_Address",
+              "type" : [ "null", {
+                "type" : "record",
+                "name" : "type26",
+                "fields" : [ {
+                  "name" : "Address_Information",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Address_Information"
+                }, {
+                  "name" : "Address_Information_2",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Address_Information_2"
+                } ]
+              } ],
+              "source" : "element Subscriber_Address"
+            }, {
+              "name" : "Subscriber_City_State_ZIP_Code",
+              "type" : [ "null", {
+                "type" : "record",
+                "name" : "type27",
+                "fields" : [ {
+                  "name" : "City_Name",
+                  "type" : [ "null", "string" ],
+                  "source" : "element City_Name"
+                }, {
+                  "name" : "State_Province_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element State_Province_Code"
+                }, {
+                  "name" : "Postal_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Postal_Code"
+                }, {
+                  "name" : "Country_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Country_Code"
+                } ]
+              } ],
+              "source" : "element Subscriber_City_State_ZIP_Code"
+            }, {
+              "name" : "Subscriber_Demographic_Information",
+              "type" : [ "null", {
+                "type" : "record",
+                "name" : "type28",
+                "fields" : [ {
+                  "name" : "Date_Time_Period_Format_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Date_Time_Period_Format_Qualifier"
+                }, {
+                  "name" : "Date_Time_Period",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Date_Time_Period"
+                }, {
+                  "name" : "Gender_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Gender_Code"
+                } ]
+              } ],
+              "source" : "element Subscriber_Demographic_Information"
+            } ]
+          },
+          "source" : "element L2010BA"
+        }, {
+          "name" : "L2010BB",
+          "type" : {
+            "type" : "record",
+            "name" : "type29",
+            "fields" : [ {
+              "name" : "Payer_Name",
+              "type" : {
+                "type" : "record",
+                "name" : "type30",
+                "fields" : [ {
+                  "name" : "Entity_Identifier_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Entity_Identifier_Code"
+                }, {
+                  "name" : "Entity_Type_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Entity_Type_Qualifier"
+                }, {
+                  "name" : "Name_Last_Organization_Name",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Last_Organization_Name"
+                }, {
+                  "name" : "Identification_Code_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Identification_Code_Qualifier"
+                }, {
+                  "name" : "Identification_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Identification_Code"
+                } ]
+              },
+              "source" : "element Payer_Name"
+            }, {
+              "name" : "Payer_Address",
+              "type" : [ "null", {
+                "type" : "record",
+                "name" : "type31",
+                "fields" : [ {
+                  "name" : "Address_Information",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Address_Information"
+                }, {
+                  "name" : "Address_Information_2",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Address_Information_2"
+                } ]
+              } ],
+              "source" : "element Payer_Address"
+            }, {
+              "name" : "Payer_City_State_ZIP_Code",
+              "type" : [ "null", {
+                "type" : "record",
+                "name" : "type32",
+                "fields" : [ {
+                  "name" : "City_Name",
+                  "type" : [ "null", "string" ],
+                  "source" : "element City_Name"
+                }, {
+                  "name" : "State_Province_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element State_Province_Code"
+                }, {
+                  "name" : "Postal_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Postal_Code"
+                }, {
+                  "name" : "Country_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Country_Code"
+                } ]
+              } ],
+              "source" : "element Payer_City_State_ZIP_Code"
+            } ]
+          },
+          "source" : "element L2010BB"
+        } ]
+      }
+    },
+    "source" : "element L2000B"
+  }, {
+    "name" : "L2000C",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "type33",
+        "fields" : [ {
+          "name" : "Patient_Hierarchical_Level",
+          "type" : [ "null", {
+            "type" : "record",
+            "name" : "type34",
+            "fields" : [ {
+              "name" : "Hierarchical_ID_Number",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_ID_Number"
+            }, {
+              "name" : "Hierarchical_Parent_ID_Number",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_Parent_ID_Number"
+            }, {
+              "name" : "Hierarchical_Level_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_Level_Code"
+            }, {
+              "name" : "Hierarchical_Child_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Hierarchical_Child_Code"
+            } ]
+          } ],
+          "source" : "element Patient_Hierarchical_Level"
+        }, {
+          "name" : "Patient_Information",
+          "type" : {
+            "type" : "record",
+            "name" : "type35",
+            "fields" : [ {
+              "name" : "Individual_Relationship_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Individual_Relationship_Code"
+            }, {
+              "name" : "Date_Time_Period_Format_Qualifier",
+              "type" : [ "null", "string" ],
+              "source" : "element Date_Time_Period_Format_Qualifier"
+            }, {
+              "name" : "Date_Time_Period",
+              "type" : [ "null", "string" ],
+              "source" : "element Date_Time_Period"
+            }, {
+              "name" : "Unit_Basis_for_Measurement_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Unit_Basis_for_Measurement_Code"
+            }, {
+              "name" : "Weight",
+              "type" : [ "null", "double" ],
+              "source" : "element Weight"
+            }, {
+              "name" : "Condition_Response_Code",
+              "type" : [ "null", "string" ],
+              "source" : "element Condition_Response_Code"
+            } ]
+          },
+          "source" : "element Patient_Information"
+        }, {
+          "name" : "L2010CA",
+          "type" : {
+            "type" : "record",
+            "name" : "type36",
+            "fields" : [ {
+              "name" : "Patient_Name",
+              "type" : {
+                "type" : "record",
+                "name" : "type37",
+                "fields" : [ {
+                  "name" : "Entity_Identifier_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Entity_Identifier_Code"
+                }, {
+                  "name" : "Entity_Type_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Entity_Type_Qualifier"
+                }, {
+                  "name" : "Name_Last_Organization_Name",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Last_Organization_Name"
+                }, {
+                  "name" : "Name_First",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_First"
+                }, {
+                  "name" : "Name_Middle",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Middle"
+                }, {
+                  "name" : "Name_Suffix",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Name_Suffix"
+                }, {
+                  "name" : "Identification_Code_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Identification_Code_Qualifier"
+                }, {
+                  "name" : "Identification_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Identification_Code"
+                } ]
+              },
+              "source" : "element Patient_Name"
+            }, {
+              "name" : "Patient_Address",
+              "type" : {
+                "type" : "record",
+                "name" : "type38",
+                "fields" : [ {
+                  "name" : "Address_Information",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Address_Information"
+                }, {
+                  "name" : "Address_Information_2",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Address_Information_2"
+                } ]
+              },
+              "source" : "element Patient_Address"
+            }, {
+              "name" : "Patient_City_State_ZIP_Code",
+              "type" : {
+                "type" : "record",
+                "name" : "type39",
+                "fields" : [ {
+                  "name" : "City_Name",
+                  "type" : [ "null", "string" ],
+                  "source" : "element City_Name"
+                }, {
+                  "name" : "State_Province_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element State_Province_Code"
+                }, {
+                  "name" : "Postal_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Postal_Code"
+                }, {
+                  "name" : "Country_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Country_Code"
+                } ]
+              },
+              "source" : "element Patient_City_State_ZIP_Code"
+            }, {
+              "name" : "Patient_Demographic_Information",
+              "type" : {
+                "type" : "record",
+                "name" : "type40",
+                "fields" : [ {
+                  "name" : "Date_Time_Period_Format_Qualifier",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Date_Time_Period_Format_Qualifier"
+                }, {
+                  "name" : "Date_Time_Period",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Date_Time_Period"
+                }, {
+                  "name" : "Gender_Code",
+                  "type" : [ "null", "string" ],
+                  "source" : "element Gender_Code"
+                } ]
+              },
+              "source" : "element Patient_Demographic_Information"
+            } ]
+          },
+          "source" : "element L2010CA"
+        }, {
+          "name" : "L2300",
+          "type" : {
+            "type" : "array",
+            "items" : {
+              "type" : "record",
+              "name" : "type41",
+              "fields" : [ {
+                "name" : "Claim_Information",
+                "type" : {
+                  "type" : "record",
+                  "name" : "type42",
+                  "fields" : [ {
+                    "name" : "Claim_Submitters_Identifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Claim_Submitters_Identifier"
+                  }, {
+                    "name" : "Monetary_Amount",
+                    "type" : [ "null", "double" ],
+                    "source" : "element Monetary_Amount"
+                  }, {
+                    "name" : "Health_Care_Service_Location_Information",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type43",
+                      "fields" : [ {
+                        "name" : "CLM051_Facility_Code_Value",
+                        "type" : [ "null", "string" ],
+                        "source" : "element CLM051_Facility_Code_Value"
+                      }, {
+                        "name" : "CLM052_Claim_Frequency_Type_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element CLM052_Claim_Frequency_Type_Code"
+                      } ]
+                    } ],
+                    "source" : "element Health_Care_Service_Location_Information"
+                  }, {
+                    "name" : "Condition_Response_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Condition_Response_Code"
+                  }, {
+                    "name" : "Provider_Accept_Assignment_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Provider_Accept_Assignment_Code"
+                  }, {
+                    "name" : "Condition_Response_Code_2",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Condition_Response_Code_2"
+                  }, {
+                    "name" : "Release_of_Information_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Release_of_Information_Code"
+                  }, {
+                    "name" : "Patient_Signature_Source_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Patient_Signature_Source_Code"
+                  }, {
+                    "name" : "Related_Causes_Information",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type44",
+                      "fields" : [ {
+                        "name" : "CLM111_Related_Causes_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element CLM111_Related-Causes_Code"
+                      }, {
+                        "name" : "CLM112_Related_Causes_Code_2",
+                        "type" : [ "null", "string" ],
+                        "source" : "element CLM112_Related-Causes_Code_2"
+                      }, {
+                        "name" : "CLM113_Related_Causes_Code_3",
+                        "type" : [ "null", "string" ],
+                        "source" : "element CLM113_Related-Causes_Code_3"
+                      }, {
+                        "name" : "CLM114_State_Province_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element CLM114_State_Province_Code"
+                      }, {
+                        "name" : "CLM115_Country_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element CLM115_Country_Code"
+                      } ]
+                    } ],
+                    "source" : "element Related_Causes_Information"
+                  }, {
+                    "name" : "Special_Program_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Special_Program_Code"
+                  }, {
+                    "name" : "Provider_Agreement_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Provider_Agreement_Code"
+                  }, {
+                    "name" : "Delay_Reason_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Delay_Reason_Code"
+                  } ]
+                },
+                "source" : "element Claim_Information"
+              }, {
+                "name" : "Initial_Treatment",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type45",
+                  "fields" : [ {
+                    "name" : "Date_Time_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period_Format_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period_Format_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period"
+                  } ]
+                } ],
+                "source" : "element Initial_Treatment"
+              }, {
+                "name" : "Date_Last_Seen",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type46",
+                  "fields" : [ {
+                    "name" : "Date_Time_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period_Format_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period_Format_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period"
+                  } ]
+                } ],
+                "source" : "element Date_Last_Seen"
+              }, {
+                "name" : "Onset_of_Current_Illness_Symptom",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type47",
+                  "fields" : [ {
+                    "name" : "Date_Time_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period_Format_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period_Format_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period"
+                  } ]
+                } ],
+                "source" : "element Onset_of_Current_Illness_Symptom"
+              }, {
+                "name" : "Similar_Illness_Symptom_Onset",
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "record",
+                    "name" : "type48",
+                    "fields" : [ {
+                      "name" : "Date_Time_Qualifier",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Date_Time_Qualifier"
+                    }, {
+                      "name" : "Date_Time_Period_Format_Qualifier",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Date_Time_Period_Format_Qualifier"
+                    }, {
+                      "name" : "Date_Time_Period",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Date_Time_Period"
+                    } ]
+                  }
+                },
+                "source" : "element Similar_Illness_Symptom_Onset"
+              }, {
+                "name" : "Accident",
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "record",
+                    "name" : "type49",
+                    "fields" : [ {
+                      "name" : "Date_Time_Qualifier",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Date_Time_Qualifier"
+                    }, {
+                      "name" : "Date_Time_Period_Format_Qualifier",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Date_Time_Period_Format_Qualifier"
+                    }, {
+                      "name" : "Date_Time_Period",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Date_Time_Period"
+                    } ]
+                  }
+                },
+                "source" : "element Accident"
+              }, {
+                "name" : "Last_Menstrual_Period",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type50",
+                  "fields" : [ {
+                    "name" : "Date_Time_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period_Format_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period_Format_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period"
+                  } ]
+                } ],
+                "source" : "element Last_Menstrual_Period"
+              }, {
+                "name" : "Last_X_ray",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type51",
+                  "fields" : [ {
+                    "name" : "Date_Time_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period_Format_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period_Format_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period"
+                  } ]
+                } ],
+                "source" : "element Last_X-ray"
+              }, {
+                "name" : "Last_Worked",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type52",
+                  "fields" : [ {
+                    "name" : "Date_Time_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period_Format_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period_Format_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period"
+                  } ]
+                } ],
+                "source" : "element Last_Worked"
+              }, {
+                "name" : "Authorized_Return_to_Work",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type53",
+                  "fields" : [ {
+                    "name" : "Date_Time_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period_Format_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period_Format_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period"
+                  } ]
+                } ],
+                "source" : "element Authorized_Return_to_Work"
+              }, {
+                "name" : "Admission",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type54",
+                  "fields" : [ {
+                    "name" : "Date_Time_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period_Format_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period_Format_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period"
+                  } ]
+                } ],
+                "source" : "element Admission"
+              }, {
+                "name" : "Discharge",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type55",
+                  "fields" : [ {
+                    "name" : "Date_Time_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period_Format_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period_Format_Qualifier"
+                  }, {
+                    "name" : "Date_Time_Period",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Date_Time_Period"
+                  } ]
+                } ],
+                "source" : "element Discharge"
+              }, {
+                "name" : "Claim_Supplemental_Information",
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "record",
+                    "name" : "type56",
+                    "fields" : [ {
+                      "name" : "Report_Type_Code",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Report_Type_Code"
+                    }, {
+                      "name" : "Report_Transmission_Code",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Report_Transmission_Code"
+                    }, {
+                      "name" : "Identification_Code_Qualifier",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Identification_Code_Qualifier"
+                    }, {
+                      "name" : "Identification_Code",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Identification_Code"
+                    } ]
+                  }
+                },
+                "source" : "element Claim_Supplemental_Information"
+              }, {
+                "name" : "Patient_Amount_Paid",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type57",
+                  "fields" : [ {
+                    "name" : "Amount_Qualifier_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Amount_Qualifier_Code"
+                  }, {
+                    "name" : "Monetary_Amount",
+                    "type" : [ "null", "double" ],
+                    "source" : "element Monetary_Amount"
+                  } ]
+                } ],
+                "source" : "element Patient_Amount_Paid"
+              }, {
+                "name" : "Mammography_Certification_Number",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type58",
+                  "fields" : [ {
+                    "name" : "Reference_Identification_Qualifier",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Reference_Identification_Qualifier"
+                  }, {
+                    "name" : "Reference_Identification",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Reference_Identification"
+                  } ]
+                } ],
+                "source" : "element Mammography_Certification_Number"
+              }, {
+                "name" : "Prior_Authorization_Referral_Number",
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "record",
+                    "name" : "type59",
+                    "fields" : [ {
+                      "name" : "Reference_Identification_Qualifier",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Reference_Identification_Qualifier"
+                    }, {
+                      "name" : "Reference_Identification",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Reference_Identification"
+                    } ]
+                  }
+                },
+                "source" : "element Prior_Authorization_Referral_Number"
+              }, {
+                "name" : "Claim_Note",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type60",
+                  "fields" : [ {
+                    "name" : "Note_Reference_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Note_Reference_Code"
+                  }, {
+                    "name" : "Desciption",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Desciption"
+                  } ]
+                } ],
+                "source" : "element Claim_Note"
+              }, {
+                "name" : "Ambulance_Transport_Information",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type61",
+                  "fields" : [ {
+                    "name" : "Unit_Basis_for_Measurement_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Unit_Basis_for_Measurement_Code"
+                  }, {
+                    "name" : "Weight",
+                    "type" : [ "null", "double" ],
+                    "source" : "element Weight"
+                  }, {
+                    "name" : "Ambulance_Transport_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Ambulance_Transport_Code"
+                  }, {
+                    "name" : "Ambulance_Transport_Reason_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Ambulance_Transport_Reason_Code"
+                  }, {
+                    "name" : "Unit_Basis_for_Measurement_Code_2",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Unit_Basis_for_Measurement_Code_2"
+                  }, {
+                    "name" : "Quantity",
+                    "type" : [ "null", "double" ],
+                    "source" : "element Quantity"
+                  }, {
+                    "name" : "Desciption",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Desciption"
+                  }, {
+                    "name" : "Desciption_2",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Desciption_2"
+                  } ]
+                } ],
+                "source" : "element Ambulance_Transport_Information"
+              }, {
+                "name" : "Ambulance_Certification",
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "record",
+                    "name" : "type62",
+                    "fields" : [ {
+                      "name" : "Code_Category",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Code_Category"
+                    }, {
+                      "name" : "Condition_Response_Code",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Condition_Response_Code"
+                    }, {
+                      "name" : "Condition_Indicator",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Condition_Indicator"
+                    }, {
+                      "name" : "Condition_Indicator_2",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Condition_Indicator_2"
+                    }, {
+                      "name" : "Condition_Indicator_3",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Condition_Indicator_3"
+                    }, {
+                      "name" : "Condition_Indicator_4",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Condition_Indicator_4"
+                    }, {
+                      "name" : "Condition_Indicator_5",
+                      "type" : [ "null", "string" ],
+                      "source" : "element Condition_Indicator_5"
+                    } ]
+                  }
+                },
+                "source" : "element Ambulance_Certification"
+              }, {
+                "name" : "EPSDT_Referral",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type63",
+                  "fields" : [ {
+                    "name" : "Code_Category",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Code_Category"
+                  }, {
+                    "name" : "Condition_Response_Code",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Condition_Response_Code"
+                  }, {
+                    "name" : "Condition_Indicator",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Condition_Indicator"
+                  }, {
+                    "name" : "Condition_Indicator_2",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Condition_Indicator_2"
+                  }, {
+                    "name" : "Condition_Indicator_3",
+                    "type" : [ "null", "string" ],
+                    "source" : "element Condition_Indicator_3"
+                  } ]
+                } ],
+                "source" : "element EPSDT_Referral"
+              }, {
+                "name" : "Health_Care_Diagnosis_Code",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type64",
+                  "fields" : [ {
+                    "name" : "Health_Care_Code_Information",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type65",
+                      "fields" : [ {
+                        "name" : "HI011_Code_List_Qualifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI011_Code_List_Qualifier_Code"
+                      }, {
+                        "name" : "HI012_Industry_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI012_Industry_Code"
+                      } ]
+                    } ],
+                    "source" : "element Health_Care_Code_Information"
+                  }, {
+                    "name" : "Health_Care_Code_Information_2",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type66",
+                      "fields" : [ {
+                        "name" : "HI021_Code_List_Qualifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI021_Code_List_Qualifier_Code"
+                      }, {
+                        "name" : "HI022_Industry_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI022_Industry_Code"
+                      } ]
+                    } ],
+                    "source" : "element Health_Care_Code_Information_2"
+                  }, {
+                    "name" : "Health_Care_Code_Information_3",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type67",
+                      "fields" : [ {
+                        "name" : "HI031_Code_List_Qualifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI031_Code_List_Qualifier_Code"
+                      }, {
+                        "name" : "HI032_Industry_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI032_Industry_Code"
+                      } ]
+                    } ],
+                    "source" : "element Health_Care_Code_Information_3"
+                  }, {
+                    "name" : "Health_Care_Code_Information_4",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type68",
+                      "fields" : [ {
+                        "name" : "HI041_Code_List_Qualifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI041_Code_List_Qualifier_Code"
+                      }, {
+                        "name" : "HI042_Industry_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI042_Industry_Code"
+                      } ]
+                    } ],
+                    "source" : "element Health_Care_Code_Information_4"
+                  }, {
+                    "name" : "Health_Care_Code_Information_5",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type69",
+                      "fields" : [ {
+                        "name" : "HI051_Code_List_Qualifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI051_Code_List_Qualifier_Code"
+                      }, {
+                        "name" : "HI052_Industry_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI052_Industry_Code"
+                      } ]
+                    } ],
+                    "source" : "element Health_Care_Code_Information_5"
+                  }, {
+                    "name" : "Health_Care_Code_Information_6",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type70",
+                      "fields" : [ {
+                        "name" : "HI061_Code_List_Qualifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI061_Code_List_Qualifier_Code"
+                      }, {
+                        "name" : "HI062_Industry_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI062_Industry_Code"
+                      } ]
+                    } ],
+                    "source" : "element Health_Care_Code_Information_6"
+                  }, {
+                    "name" : "Health_Care_Code_Information_7",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type71",
+                      "fields" : [ {
+                        "name" : "HI071_Code_List_Qualifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI071_Code_List_Qualifier_Code"
+                      }, {
+                        "name" : "HI072_Industry_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI072_Industry_Code"
+                      } ]
+                    } ],
+                    "source" : "element Health_Care_Code_Information_7"
+                  }, {
+                    "name" : "Health_Care_Code_Information_8",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type72",
+                      "fields" : [ {
+                        "name" : "HI081_Code_List_Qualifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI081_Code_List_Qualifier_Code"
+                      }, {
+                        "name" : "HI082_Industry_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element HI082_Industry_Code"
+                      } ]
+                    } ],
+                    "source" : "element Health_Care_Code_Information_8"
+                  } ]
+                } ],
+                "source" : "element Health_Care_Diagnosis_Code"
+              }, {
+                "name" : "L2305",
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "record",
+                    "name" : "type73",
+                    "fields" : [ {
+                      "name" : "Home_Health_Care_Plan_Information",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type74",
+                        "fields" : [ {
+                          "name" : "Discipline_Type_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Discipline_Type_Code"
+                        }, {
+                          "name" : "Number",
+                          "type" : [ "null", "long" ],
+                          "source" : "element Number"
+                        }, {
+                          "name" : "Number_2",
+                          "type" : [ "null", "long" ],
+                          "source" : "element Number_2"
+                        } ]
+                      } ],
+                      "source" : "element Home_Health_Care_Plan_Information"
+                    }, {
+                      "name" : "Health_Care_Services_Delivery",
+                      "type" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "type75",
+                          "fields" : [ {
+                            "name" : "Quantity_Qualifier",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Quantity_Qualifier"
+                          }, {
+                            "name" : "Quantity",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Quantity"
+                          }, {
+                            "name" : "Unit_Basis_for_Measurement_Code",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Unit_Basis_for_Measurement_Code"
+                          }, {
+                            "name" : "Sample_Selection_Modulus",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Sample_Selection_Modulus"
+                          }, {
+                            "name" : "Time_Period_Qualifier",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Time_Period_Qualifier"
+                          }, {
+                            "name" : "Number_of_Periods",
+                            "type" : [ "null", "long" ],
+                            "source" : "element Number_of_Periods"
+                          }, {
+                            "name" : "Ship_Delivery_or_Calendar_Pattern_Code",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Ship_Delivery_or_Calendar_Pattern_Code"
+                          }, {
+                            "name" : "Ship_Delivery_Pattern_Time_Code",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Ship_Delivery_Pattern_Time_Code"
+                          } ]
+                        }
+                      },
+                      "source" : "element Health_Care_Services_Delivery"
+                    } ]
+                  }
+                },
+                "source" : "element L2305"
+              }, {
+                "name" : "L2310A",
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "record",
+                    "name" : "type76",
+                    "fields" : [ {
+                      "name" : "Referring_Provider_Name",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type77",
+                        "fields" : [ {
+                          "name" : "Entity_Identifier_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Entity_Identifier_Code"
+                        }, {
+                          "name" : "Entity_Type_Qualifier",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Entity_Type_Qualifier"
+                        }, {
+                          "name" : "Name_Last_or_Organization_Name",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Name_Last_or_Organization_Name"
+                        }, {
+                          "name" : "Name_First",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Name_First"
+                        }, {
+                          "name" : "Name_Middle",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Name_Middle"
+                        }, {
+                          "name" : "Name_Suffix",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Name_Suffix"
+                        }, {
+                          "name" : "Identification_Code_Qualifier",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Identification_Code_Qualifier"
+                        }, {
+                          "name" : "Identification_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Identification_Code"
+                        } ]
+                      } ],
+                      "source" : "element Referring_Provider_Name"
+                    }, {
+                      "name" : "Referring_Provider_Specialty_Information",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type78",
+                        "fields" : [ {
+                          "name" : "Provider_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Provider_Code"
+                        }, {
+                          "name" : "Reference_Identification_Qualifier",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Reference_Identification_Qualifier"
+                        }, {
+                          "name" : "Reference_Identification",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Reference_Identification"
+                        } ]
+                      } ],
+                      "source" : "element Referring_Provider_Specialty_Information"
+                    }, {
+                      "name" : "Referring_Provider_Secondary_Identification",
+                      "type" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "type79",
+                          "fields" : [ {
+                            "name" : "Reference_Identification_Qualifier",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Reference_Identification_Qualifier"
+                          }, {
+                            "name" : "Reference_Identification",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Reference_Identification"
+                          } ]
+                        }
+                      },
+                      "source" : "element Referring_Provider_Secondary_Identification"
+                    } ]
+                  }
+                },
+                "source" : "element L2310A"
+              }, {
+                "name" : "L2310B",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type80",
+                  "fields" : [ {
+                    "name" : "Rendering_Provider_Name",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type81",
+                      "fields" : [ {
+                        "name" : "Entity_Identifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Entity_Identifier_Code"
+                      }, {
+                        "name" : "Entity_Type_Qualifier",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Entity_Type_Qualifier"
+                      }, {
+                        "name" : "Name_Last_or_Organization_Name",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Name_Last_or_Organization_Name"
+                      }, {
+                        "name" : "Name_First",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Name_First"
+                      }, {
+                        "name" : "Name_Middle",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Name_Middle"
+                      }, {
+                        "name" : "Name_Suffix",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Name_Suffix"
+                      }, {
+                        "name" : "Identification_Code_Qualifier",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Identification_Code_Qualifier"
+                      }, {
+                        "name" : "Identification_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Identification_Code"
+                      } ]
+                    } ],
+                    "source" : "element Rendering_Provider_Name"
+                  }, {
+                    "name" : "Rendering_Provider_Specialty_Information",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type82",
+                      "fields" : [ {
+                        "name" : "Provider_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Provider_Code"
+                      }, {
+                        "name" : "Reference_Identification_Qualifier",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Reference_Identification_Qualifier"
+                      }, {
+                        "name" : "Reference_Identification",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Reference_Identification"
+                      } ]
+                    } ],
+                    "source" : "element Rendering_Provider_Specialty_Information"
+                  }, {
+                    "name" : "Rendering_Provider_Secondary_Identification",
+                    "type" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "record",
+                        "name" : "type83",
+                        "fields" : [ {
+                          "name" : "Reference_Identification_Qualifier",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Reference_Identification_Qualifier"
+                        }, {
+                          "name" : "Reference_Identification",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Reference_Identification"
+                        } ]
+                      }
+                    },
+                    "source" : "element Rendering_Provider_Secondary_Identification"
+                  } ]
+                } ],
+                "source" : "element L2310B"
+              }, {
+                "name" : "L2310D",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "type84",
+                  "fields" : [ {
+                    "name" : "Service_Facility_Location",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "type85",
+                      "fields" : [ {
+                        "name" : "Entity_Identifier_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Entity_Identifier_Code"
+                      }, {
+                        "name" : "Entity_Type_Qualifier",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Entity_Type_Qualifier"
+                      }, {
+                        "name" : "Name_Last_or_Organization_Name",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Name_Last_or_Organization_Name"
+                      }, {
+                        "name" : "Identification_Code_Qualifier",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Identification_Code_Qualifier"
+                      }, {
+                        "name" : "Identification_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Identification_Code"
+                      } ]
+                    } ],
+                    "source" : "element Service_Facility_Location"
+                  }, {
+                    "name" : "Service_Facility_Location_Address",
+                    "type" : {
+                      "type" : "record",
+                      "name" : "type86",
+                      "fields" : [ {
+                        "name" : "Address_Information",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Address_Information"
+                      }, {
+                        "name" : "Address_Information_2",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Address_Information_2"
+                      } ]
+                    },
+                    "source" : "element Service_Facility_Location_Address"
+                  }, {
+                    "name" : "Service_Facility_Location_City_State_ZIP",
+                    "type" : {
+                      "type" : "record",
+                      "name" : "type87",
+                      "fields" : [ {
+                        "name" : "City_Name",
+                        "type" : [ "null", "string" ],
+                        "source" : "element City_Name"
+                      }, {
+                        "name" : "State_or_Province_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element State_or_Province_Code"
+                      }, {
+                        "name" : "Postal_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Postal_Code"
+                      }, {
+                        "name" : "Country_Code",
+                        "type" : [ "null", "string" ],
+                        "source" : "element Country_Code"
+                      } ]
+                    },
+                    "source" : "element Service_Facility_Location_City_State_ZIP"
+                  }, {
+                    "name" : "Service_Facility_Location_Secondary_Identification",
+                    "type" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "record",
+                        "name" : "type88",
+                        "fields" : [ {
+                          "name" : "Reference_Identification_Qualifier",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Reference_Identification_Qualifier"
+                        }, {
+                          "name" : "Reference_Identification",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Reference_Identification"
+                        } ]
+                      }
+                    },
+                    "source" : "element Service_Facility_Location_Secondary_Identification"
+                  } ]
+                } ],
+                "source" : "element L2310D"
+              }, {
+                "name" : "L2320",
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "record",
+                    "name" : "type89",
+                    "fields" : [ {
+                      "name" : "Other_Subscriber_Information",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type90",
+                        "fields" : [ {
+                          "name" : "Payer_Responsibility_Sequence_Number_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Payer_Responsibility_Sequence_Number_Code"
+                        }, {
+                          "name" : "Individual_Relationship_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Individual_Relationship_Code"
+                        }, {
+                          "name" : "Reference_Identification",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Reference_Identification"
+                        }, {
+                          "name" : "Name",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Name"
+                        }, {
+                          "name" : "Insurance_Type_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Insurance_Type_Code"
+                        }, {
+                          "name" : "Claim_Filing_Indicator_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Claim_Filing_Indicator_Code"
+                        } ]
+                      } ],
+                      "source" : "element Other_Subscriber_Information"
+                    }, {
+                      "name" : "Claim_Level_Adjustments",
+                      "type" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "type91",
+                          "fields" : [ {
+                            "name" : "Claim_Adjustment_Group_Code",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Claim_Adjustment_Group_Code"
+                          }, {
+                            "name" : "Claim_Adjustment_Reason_Code",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Claim_Adjustment_Reason_Code"
+                          }, {
+                            "name" : "Monetary_Amount",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Monetary_Amount"
+                          }, {
+                            "name" : "Quantity",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Quantity"
+                          }, {
+                            "name" : "Claim_Adjustment_Reason_Code_2",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Claim_Adjustment_Reason_Code_2"
+                          }, {
+                            "name" : "Monetary_Amount_2",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Monetary_Amount_2"
+                          }, {
+                            "name" : "Quantity_2",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Quantity_2"
+                          }, {
+                            "name" : "Claim_Adjustment_Reason_Code_3",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Claim_Adjustment_Reason_Code_3"
+                          }, {
+                            "name" : "Monetary_Amount_3",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Monetary_Amount_3"
+                          }, {
+                            "name" : "Quantity_3",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Quantity_3"
+                          }, {
+                            "name" : "Claim_Adjustment_Reason_Code_4",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Claim_Adjustment_Reason_Code_4"
+                          }, {
+                            "name" : "Monetary_Amount_4",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Monetary_Amount_4"
+                          }, {
+                            "name" : "Quantity_4",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Quantity_4"
+                          }, {
+                            "name" : "Claim_Adjustment_Reason_Code_5",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Claim_Adjustment_Reason_Code_5"
+                          }, {
+                            "name" : "Monetary_Amount_5",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Monetary_Amount_5"
+                          }, {
+                            "name" : "Quantity_5",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Quantity_5"
+                          }, {
+                            "name" : "Claim_Adjustment_Reason_Code_6",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Claim_Adjustment_Reason_Code_6"
+                          }, {
+                            "name" : "Monetary_Amount_6",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Monetary_Amount_6"
+                          }, {
+                            "name" : "Quantity_6",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Quantity_6"
+                          } ]
+                        }
+                      },
+                      "source" : "element Claim_Level_Adjustments"
+                    }, {
+                      "name" : "COB_Payer_Paid_Amount",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type92",
+                        "fields" : [ {
+                          "name" : "Amount_Qualifier_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Amount_Qualifier_Code"
+                        }, {
+                          "name" : "Monetary_Amount",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Monetary_Amount"
+                        } ]
+                      } ],
+                      "source" : "element COB_Payer_Paid_Amount"
+                    }, {
+                      "name" : "COB_Allowed_Amount",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type93",
+                        "fields" : [ {
+                          "name" : "Amount_Qualifier_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Amount_Qualifier_Code"
+                        }, {
+                          "name" : "Monetary_Amount",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Monetary_Amount"
+                        } ]
+                      } ],
+                      "source" : "element COB_Allowed_Amount"
+                    }, {
+                      "name" : "COB_Patient_Responsibility_Amount",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type94",
+                        "fields" : [ {
+                          "name" : "Amount_Qualifier_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Amount_Qualifier_Code"
+                        }, {
+                          "name" : "Monetary_Amount",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Monetary_Amount"
+                        } ]
+                      } ],
+                      "source" : "element COB_Patient_Responsibility_Amount"
+                    }, {
+                      "name" : "COB_Patient_Paid_Amount",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type95",
+                        "fields" : [ {
+                          "name" : "Amount_Qualifier_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Amount_Qualifier_Code"
+                        }, {
+                          "name" : "Monetary_Amount",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Monetary_Amount"
+                        } ]
+                      } ],
+                      "source" : "element COB_Patient_Paid_Amount"
+                    }, {
+                      "name" : "Subscriber_Demographic_Information",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type96",
+                        "fields" : [ {
+                          "name" : "Date_Time_Period_Format_Qualifier",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Date_Time_Period_Format_Qualifier"
+                        }, {
+                          "name" : "Date_Time_Period",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Date_Time_Period"
+                        }, {
+                          "name" : "Gender_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Gender_Code"
+                        } ]
+                      } ],
+                      "source" : "element Subscriber_Demographic_Information"
+                    }, {
+                      "name" : "Other_Insurance_Coverage_Information",
+                      "type" : {
+                        "type" : "record",
+                        "name" : "type97",
+                        "fields" : [ {
+                          "name" : "Condition_Response_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Condition_Response_Code"
+                        }, {
+                          "name" : "Patient_Signature_Source_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Patient_Signature_Source_Code"
+                        }, {
+                          "name" : "Release_of_Information_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Release_of_Information_Code"
+                        } ]
+                      },
+                      "source" : "element Other_Insurance_Coverage_Information"
+                    }, {
+                      "name" : "L2330A",
+                      "type" : {
+                        "type" : "record",
+                        "name" : "type98",
+                        "fields" : [ {
+                          "name" : "Other_Subscriber_Name",
+                          "type" : {
+                            "type" : "record",
+                            "name" : "type99",
+                            "fields" : [ {
+                              "name" : "Entity_Identifier_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Identifier_Code"
+                            }, {
+                              "name" : "Entity_Type_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Type_Qualifier"
+                            }, {
+                              "name" : "Name_Last_or_Organization_Name",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Name_Last_or_Organization_Name"
+                            }, {
+                              "name" : "Name_First",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Name_First"
+                            }, {
+                              "name" : "Name_Middle",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Name_Middle"
+                            }, {
+                              "name" : "Name_Suffix",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Name_Suffix"
+                            }, {
+                              "name" : "Identification_Code_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Identification_Code_Qualifier"
+                            }, {
+                              "name" : "Identification_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Identification_Code"
+                            } ]
+                          },
+                          "source" : "element Other_Subscriber_Name"
+                        }, {
+                          "name" : "Other_Subscriber_Address",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type100",
+                            "fields" : [ {
+                              "name" : "Address_Information",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Address_Information"
+                            }, {
+                              "name" : "Address_Information_2",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Address_Information_2"
+                            } ]
+                          } ],
+                          "source" : "element Other_Subscriber_Address"
+                        }, {
+                          "name" : "Other_Subscriber_City_State_ZIP_Code",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type101",
+                            "fields" : [ {
+                              "name" : "City_Name",
+                              "type" : [ "null", "string" ],
+                              "source" : "element City_Name"
+                            }, {
+                              "name" : "State_or_Province_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element State_or_Province_Code"
+                            }, {
+                              "name" : "Postal_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Postal_Code"
+                            }, {
+                              "name" : "Country_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Country_Code"
+                            } ]
+                          } ],
+                          "source" : "element Other_Subscriber_City_State_ZIP_Code"
+                        } ]
+                      },
+                      "source" : "element L2330A"
+                    }, {
+                      "name" : "L2330B",
+                      "type" : {
+                        "type" : "record",
+                        "name" : "type102",
+                        "fields" : [ {
+                          "name" : "Other_Payer_Name",
+                          "type" : {
+                            "type" : "record",
+                            "name" : "type103",
+                            "fields" : [ {
+                              "name" : "Entity_Identifier_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Identifier_Code"
+                            }, {
+                              "name" : "Entity_Type_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Type_Qualifier"
+                            }, {
+                              "name" : "Name_Last_or_Organization_Name",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Name_Last_or_Organization_Name"
+                            }, {
+                              "name" : "Identification_Code_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Identification_Code_Qualifier"
+                            }, {
+                              "name" : "Identification_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Identification_Code"
+                            } ]
+                          },
+                          "source" : "element Other_Payer_Name"
+                        }, {
+                          "name" : "Other_Payer_Contact_Information",
+                          "type" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "type104",
+                              "fields" : [ {
+                                "name" : "Contact_Function_Code",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Contact_Function_Code"
+                              }, {
+                                "name" : "Name",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Name"
+                              }, {
+                                "name" : "Communication_Number_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Communication_Number_Qualifier"
+                              }, {
+                                "name" : "Communication_Number",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Communication_Number"
+                              }, {
+                                "name" : "Communication_Number_Qualifier_2",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Communication_Number_Qualifier_2"
+                              }, {
+                                "name" : "Communication_Number_2",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Communication_Number_2"
+                              }, {
+                                "name" : "Communication_Number_Qualifier_3",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Communication_Number_Qualifier_3"
+                              }, {
+                                "name" : "Communication_Number_3",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Communication_Number_3"
+                              } ]
+                            }
+                          },
+                          "source" : "element Other_Payer_Contact_Information"
+                        }, {
+                          "name" : "Claim_Adjudication_Date",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type105",
+                            "fields" : [ {
+                              "name" : "Date_Time_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Date_Time_Qualifier"
+                            }, {
+                              "name" : "Date_Time_Period_Format_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Date_Time_Period_Format_Qualifier"
+                            }, {
+                              "name" : "Date_Time_Period",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Date_Time_Period"
+                            } ]
+                          } ],
+                          "source" : "element Claim_Adjudication_Date"
+                        }, {
+                          "name" : "Other_Payer_Secondary_Identifier",
+                          "type" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "type106",
+                              "fields" : [ {
+                                "name" : "Reference_Identification_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification_Qualifier"
+                              }, {
+                                "name" : "Reference_Identification",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification"
+                              } ]
+                            }
+                          },
+                          "source" : "element Other_Payer_Secondary_Identifier"
+                        }, {
+                          "name" : "Other_Payer_Prior_Authorization_or_Referral_Number",
+                          "type" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "type107",
+                              "fields" : [ {
+                                "name" : "Reference_Identification_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification_Qualifier"
+                              }, {
+                                "name" : "Reference_Identification",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification"
+                              } ]
+                            }
+                          },
+                          "source" : "element Other_Payer_Prior_Authorization_or_Referral_Number"
+                        }, {
+                          "name" : "Other_Payer_Claim_Adjustment_Indicator",
+                          "type" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "type108",
+                              "fields" : [ {
+                                "name" : "Reference_Identification_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification_Qualifier"
+                              }, {
+                                "name" : "Reference_Identification",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification"
+                              } ]
+                            }
+                          },
+                          "source" : "element Other_Payer_Claim_Adjustment_Indicator"
+                        } ]
+                      },
+                      "source" : "element L2330B"
+                    }, {
+                      "name" : "L2330C",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type109",
+                        "fields" : [ {
+                          "name" : "Other_Payer_Patient_Information",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type110",
+                            "fields" : [ {
+                              "name" : "Entity_Identifier_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Identifier_Code"
+                            }, {
+                              "name" : "Entity_Type_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Type_Qualifier"
+                            }, {
+                              "name" : "Identification_Code_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Identification_Code_Qualifier"
+                            }, {
+                              "name" : "Identification_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Identification_Code"
+                            } ]
+                          } ],
+                          "source" : "element Other_Payer_Patient_Information"
+                        }, {
+                          "name" : "Other_Payer_Patient_Identification",
+                          "type" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "type111",
+                              "fields" : [ {
+                                "name" : "Reference_Identification_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification_Qualifier"
+                              }, {
+                                "name" : "Reference_Identification",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification"
+                              } ]
+                            }
+                          },
+                          "source" : "element Other_Payer_Patient_Identification"
+                        } ]
+                      } ],
+                      "source" : "element L2330C"
+                    }, {
+                      "name" : "L2330D",
+                      "type" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "type112",
+                          "fields" : [ {
+                            "name" : "Other_Payer_Referring_Provider",
+                            "type" : [ "null", {
+                              "type" : "record",
+                              "name" : "type113",
+                              "fields" : [ {
+                                "name" : "Entity_Identifier_Code",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Entity_Identifier_Code"
+                              }, {
+                                "name" : "Entity_Type_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Entity_Type_Qualifier"
+                              } ]
+                            } ],
+                            "source" : "element Other_Payer_Referring_Provider"
+                          }, {
+                            "name" : "Other_Payer_Referring_Provider_Identification",
+                            "type" : {
+                              "type" : "array",
+                              "items" : {
+                                "type" : "record",
+                                "name" : "type114",
+                                "fields" : [ {
+                                  "name" : "Reference_Identification_Qualifier",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element Reference_Identification_Qualifier"
+                                }, {
+                                  "name" : "Reference_Identification",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element Reference_Identification"
+                                } ]
+                              }
+                            },
+                            "source" : "element Other_Payer_Referring_Provider_Identification"
+                          } ]
+                        }
+                      },
+                      "source" : "element L2330D"
+                    }, {
+                      "name" : "L2330E",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type115",
+                        "fields" : [ {
+                          "name" : "Other_Payer_Rendering_Provider",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type116",
+                            "fields" : [ {
+                              "name" : "Entity_Identifier_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Identifier_Code"
+                            }, {
+                              "name" : "Entity_Type_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Type_Qualifier"
+                            } ]
+                          } ],
+                          "source" : "element Other_Payer_Rendering_Provider"
+                        }, {
+                          "name" : "Other_Payer_Rendering_Provider_Secondary_Identification",
+                          "type" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "type117",
+                              "fields" : [ {
+                                "name" : "Reference_Identification_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification_Qualifier"
+                              }, {
+                                "name" : "Reference_Identification",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification"
+                              } ]
+                            }
+                          },
+                          "source" : "element Other_Payer_Rendering_Provider_Secondary_Identification"
+                        } ]
+                      } ],
+                      "source" : "element L2330E"
+                    }, {
+                      "name" : "L2330F",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type118",
+                        "fields" : [ {
+                          "name" : "Other_Payer_Purchased_Service_Provider",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type119",
+                            "fields" : [ {
+                              "name" : "Entity_Identifier_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Identifier_Code"
+                            }, {
+                              "name" : "Entity_Type_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Type_Qualifier"
+                            } ]
+                          } ],
+                          "source" : "element Other_Payer_Purchased_Service_Provider"
+                        }, {
+                          "name" : "Other_Payer_Purchased_Service_Provider_Identification",
+                          "type" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "type120",
+                              "fields" : [ {
+                                "name" : "Reference_Identification_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification_Qualifier"
+                              }, {
+                                "name" : "Reference_Identification",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification"
+                              } ]
+                            }
+                          },
+                          "source" : "element Other_Payer_Purchased_Service_Provider_Identification"
+                        } ]
+                      } ],
+                      "source" : "element L2330F"
+                    }, {
+                      "name" : "L2330G",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type121",
+                        "fields" : [ {
+                          "name" : "Other_Payer_Service_Facility_Location",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type122",
+                            "fields" : [ {
+                              "name" : "Entity_Identifier_Code",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Identifier_Code"
+                            }, {
+                              "name" : "Entity_Type_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element Entity_Type_Qualifier"
+                            } ]
+                          } ],
+                          "source" : "element Other_Payer_Service_Facility_Location"
+                        }, {
+                          "name" : "Other_Payer_Service_Facility_Location_Identification",
+                          "type" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "type123",
+                              "fields" : [ {
+                                "name" : "Reference_Identification_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification_Qualifier"
+                              }, {
+                                "name" : "Reference_Identification",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Reference_Identification"
+                              } ]
+                            }
+                          },
+                          "source" : "element Other_Payer_Service_Facility_Location_Identification"
+                        } ]
+                      } ],
+                      "source" : "element L2330G"
+                    } ]
+                  }
+                },
+                "source" : "element L2320"
+              }, {
+                "name" : "L2400",
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "record",
+                    "name" : "type124",
+                    "fields" : [ {
+                      "name" : "Service_Line",
+                      "type" : {
+                        "type" : "record",
+                        "name" : "type125",
+                        "fields" : [ {
+                          "name" : "Assigned_Number",
+                          "type" : [ "null", "long" ],
+                          "source" : "element Assigned_Number"
+                        } ]
+                      },
+                      "source" : "element Service_Line"
+                    }, {
+                      "name" : "Professional_Service",
+                      "type" : {
+                        "type" : "record",
+                        "name" : "type126",
+                        "fields" : [ {
+                          "name" : "Composite_Medical_Procedure_Identifier",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type127",
+                            "fields" : [ {
+                              "name" : "SV1011_Product_Service_ID_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element SV1011_Product_Service_ID_Qualifier"
+                            }, {
+                              "name" : "SV1012_Product_Service_ID",
+                              "type" : [ "null", "string" ],
+                              "source" : "element SV1012_Product_Service_ID"
+                            }, {
+                              "name" : "SV1013_Procedure_Modifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element SV1013_Procedure_Modifier"
+                            }, {
+                              "name" : "SV1014_Procedure_Modifier_2",
+                              "type" : [ "null", "string" ],
+                              "source" : "element SV1014_Procedure_Modifier_2"
+                            }, {
+                              "name" : "SV1015_Procedure_Modifier_3",
+                              "type" : [ "null", "string" ],
+                              "source" : "element SV1015_Procedure_Modifier_3"
+                            }, {
+                              "name" : "SV1016_Procedure_Modifier_4",
+                              "type" : [ "null", "string" ],
+                              "source" : "element SV1016_Procedure_Modifier_4"
+                            } ]
+                          } ],
+                          "source" : "element Composite_Medical_Procedure_Identifier"
+                        }, {
+                          "name" : "Monetary_Amount",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Monetary_Amount"
+                        }, {
+                          "name" : "Unit_Basis_for_Measurement_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Unit_Basis_for_Measurement_Code"
+                        }, {
+                          "name" : "Quantity",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Quantity"
+                        }, {
+                          "name" : "Facility_Code_Value",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Facility_Code_Value"
+                        }, {
+                          "name" : "Composite_Diagnosis_Code_Pointer",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type128",
+                            "fields" : [ {
+                              "name" : "SV1071_Diagnosis_Code_Pointer",
+                              "type" : [ "null", "long" ],
+                              "source" : "element SV1071_Diagnosis_Code_Pointer"
+                            }, {
+                              "name" : "SV1072_Diagnosis_Code_Pointer_2",
+                              "type" : [ "null", "long" ],
+                              "source" : "element SV1072_Diagnosis_Code_Pointer_2"
+                            }, {
+                              "name" : "SV1073_Diagnosis_Code_Pointer_3",
+                              "type" : [ "null", "long" ],
+                              "source" : "element SV1073_Diagnosis_Code_Pointer_3"
+                            }, {
+                              "name" : "SV1074_Diagnosis_Code_Pointer_4",
+                              "type" : [ "null", "long" ],
+                              "source" : "element SV1074_Diagnosis_Code_Pointer_4"
+                            } ]
+                          } ],
+                          "source" : "element Composite_Diagnosis_Code_Pointer"
+                        }, {
+                          "name" : "Condition_Response_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Condition_Response_Code"
+                        }, {
+                          "name" : "Condition_Response_Code_2",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Condition_Response_Code_2"
+                        }, {
+                          "name" : "Condition_Response_Code_3",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Condition_Response_Code_3"
+                        }, {
+                          "name" : "Copay_Status_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Copay_Status_Code"
+                        } ]
+                      },
+                      "source" : "element Professional_Service"
+                    }, {
+                      "name" : "Durable_Medical_Equipment_Service",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type129",
+                        "fields" : [ {
+                          "name" : "Composite_Medical_Procedure_Identifier",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "type130",
+                            "fields" : [ {
+                              "name" : "SV5011_Product_Service_ID_Qualifier",
+                              "type" : [ "null", "string" ],
+                              "source" : "element SV5011_Product_Service_ID_Qualifier"
+                            }, {
+                              "name" : "SV5012_Product_Service_ID",
+                              "type" : [ "null", "string" ],
+                              "source" : "element SV5012_Product_Service_ID"
+                            } ]
+                          } ],
+                          "source" : "element Composite_Medical_Procedure_Identifier"
+                        }, {
+                          "name" : "Unit_Basis_for_Measurement_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Unit_Basis_for_Measurement_Code"
+                        }, {
+                          "name" : "Quantity",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Quantity"
+                        }, {
+                          "name" : "Monetary_Amount",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Monetary_Amount"
+                        }, {
+                          "name" : "Monetary_Amount_2",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Monetary_Amount_2"
+                        }, {
+                          "name" : "Frequency_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Frequency_Code"
+                        } ]
+                      } ],
+                      "source" : "element Durable_Medical_Equipment_Service"
+                    }, {
+                      "name" : "Home_Oxygen_Therapy_Information",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type131",
+                        "fields" : [ {
+                          "name" : "Certification_Type_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Certification_Type_Code"
+                        }, {
+                          "name" : "Quantity",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Quantity"
+                        }, {
+                          "name" : "Quantity_2",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Quantity_2"
+                        }, {
+                          "name" : "Quantity_3",
+                          "type" : [ "null", "double" ],
+                          "source" : "element Quantity_3"
+                        }, {
+                          "name" : "Oxygen_Test_Condition_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Oxygen_Test_Condition_Code"
+                        }, {
+                          "name" : "Oxygen_Test_Findings_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Oxygen_Test_Findings_Code"
+                        }, {
+                          "name" : "Oxygen_Test_Findings_Code_2",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Oxygen_Test_Findings_Code_2"
+                        }, {
+                          "name" : "Oxygen_Test_Findings_Code_3",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Oxygen_Test_Findings_Code_3"
+                        } ]
+                      } ],
+                      "source" : "element Home_Oxygen_Therapy_Information"
+                    }, {
+                      "name" : "DMERC_Condition_Indicator",
+                      "type" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "type132",
+                          "fields" : [ {
+                            "name" : "Code_Category",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Code_Category"
+                          }, {
+                            "name" : "Condition_Response_Code",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Condition_Response_Code"
+                          }, {
+                            "name" : "Condition_Indicator",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Condition_Indicator"
+                          }, {
+                            "name" : "Condition_Indicator_2",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Condition_Indicator_2"
+                          }, {
+                            "name" : "Condition_Indicator_3",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Condition_Indicator_3"
+                          }, {
+                            "name" : "Condition_Indicator_4",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Condition_Indicator_4"
+                          }, {
+                            "name" : "Condition_Indicator_5",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Condition_Indicator_5"
+                          } ]
+                        }
+                      },
+                      "source" : "element DMERC_Condition_Indicator"
+                    }, {
+                      "name" : "Service_Date",
+                      "type" : {
+                        "type" : "record",
+                        "name" : "type133",
+                        "fields" : [ {
+                          "name" : "Date_Time_Qualifier",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Date_Time_Qualifier"
+                        }, {
+                          "name" : "Date_Time_Period_Format_Qualifier",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Date_Time_Period_Format_Qualifier"
+                        }, {
+                          "name" : "Date_Time_Period",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Date_Time_Period"
+                        } ]
+                      },
+                      "source" : "element Service_Date"
+                    }, {
+                      "name" : "Test_Date",
+                      "type" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "type134",
+                          "fields" : [ {
+                            "name" : "Date_Time_Qualifier",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Date_Time_Qualifier"
+                          }, {
+                            "name" : "Date_Time_Period_Format_Qualifier",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Date_Time_Period_Format_Qualifier"
+                          }, {
+                            "name" : "Date_Time_Period",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Date_Time_Period"
+                          } ]
+                        }
+                      },
+                      "source" : "element Test_Date"
+                    }, {
+                      "name" : "Oxygen_Saturation_Arterial_Blood_Gas_Test",
+                      "type" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "type135",
+                          "fields" : [ {
+                            "name" : "Date_Time_Qualifier",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Date_Time_Qualifier"
+                          }, {
+                            "name" : "Date_Time_Period_Format_Qualifier",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Date_Time_Period_Format_Qualifier"
+                          }, {
+                            "name" : "Date_Time_Period",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Date_Time_Period"
+                          } ]
+                        }
+                      },
+                      "source" : "element Oxygen_Saturation_Arterial_Blood_Gas_Test"
+                    }, {
+                      "name" : "Test_Result",
+                      "type" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "type136",
+                          "fields" : [ {
+                            "name" : "Measurement_Reference_ID_Code",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Measurement_Reference_ID_Code"
+                          }, {
+                            "name" : "Measurement_Qualifier",
+                            "type" : [ "null", "string" ],
+                            "source" : "element Measurement_Qualifier"
+                          }, {
+                            "name" : "Measurement_Value",
+                            "type" : [ "null", "double" ],
+                            "source" : "element Measurement_Value"
+                          } ]
+                        }
+                      },
+                      "source" : "element Test_Result"
+                    }, {
+                      "name" : "Line_Item_Control_Number",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type137",
+                        "fields" : [ {
+                          "name" : "Reference_Identification_Qualifier",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Reference_Identification_Qualifier"
+                        }, {
+                          "name" : "Reference_Identification",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Reference_Identification"
+                        } ]
+                      } ],
+                      "source" : "element Line_Item_Control_Number"
+                    }, {
+                      "name" : "Line_Note",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "type138",
+                        "fields" : [ {
+                          "name" : "Note_Reference_Code",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Note_Reference_Code"
+                        }, {
+                          "name" : "Description",
+                          "type" : [ "null", "string" ],
+                          "source" : "element Description"
+                        } ]
+                      } ],
+                      "source" : "element Line_Note"
+                    }, {
+                      "name" : "L2430",
+                      "type" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "type139",
+                          "fields" : [ {
+                            "name" : "Line_Adjudication_Information",
+                            "type" : [ "null", {
+                              "type" : "record",
+                              "name" : "type140",
+                              "fields" : [ {
+                                "name" : "Identification_Code",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Identification_Code"
+                              }, {
+                                "name" : "Monetary_Amount",
+                                "type" : [ "null", "double" ],
+                                "source" : "element Monetary_Amount"
+                              }, {
+                                "name" : "Composite_Medical_Procedure_Identifier",
+                                "type" : [ "null", {
+                                  "type" : "record",
+                                  "name" : "type141",
+                                  "fields" : [ {
+                                    "name" : "SVD031_Product_Service_ID_Qualifier",
+                                    "type" : [ "null", "string" ],
+                                    "source" : "element SVD031_Product_Service_ID_Qualifier"
+                                  }, {
+                                    "name" : "SVD032_Product_Service_ID",
+                                    "type" : [ "null", "string" ],
+                                    "source" : "element SVD032_Product_Service_ID"
+                                  }, {
+                                    "name" : "SVD033_Procedure_Modifier",
+                                    "type" : [ "null", "string" ],
+                                    "source" : "element SVD033_Procedure_Modifier"
+                                  }, {
+                                    "name" : "SVD034_Procedure_Modifier",
+                                    "type" : [ "null", "string" ],
+                                    "source" : "element SVD034_Procedure_Modifier"
+                                  }, {
+                                    "name" : "SVD035_Procedure_Modifier",
+                                    "type" : [ "null", "string" ],
+                                    "source" : "element SVD035_Procedure_Modifier"
+                                  }, {
+                                    "name" : "SVD036_Procedure_Modifier",
+                                    "type" : [ "null", "string" ],
+                                    "source" : "element SVD036_Procedure_Modifier"
+                                  }, {
+                                    "name" : "SVD037_Description",
+                                    "type" : [ "null", "string" ],
+                                    "source" : "element SVD037_Description"
+                                  } ]
+                                } ],
+                                "source" : "element Composite_Medical_Procedure_Identifier"
+                              }, {
+                                "name" : "Quantity",
+                                "type" : [ "null", "double" ],
+                                "source" : "element Quantity"
+                              }, {
+                                "name" : "Assigned_Number",
+                                "type" : [ "null", "long" ],
+                                "source" : "element Assigned_Number"
+                              } ]
+                            } ],
+                            "source" : "element Line_Adjudication_Information"
+                          }, {
+                            "name" : "Line_Adjustment",
+                            "type" : {
+                              "type" : "array",
+                              "items" : {
+                                "type" : "record",
+                                "name" : "type142",
+                                "fields" : [ {
+                                  "name" : "Claim_Adjustment_Group_Code",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element Claim_Adjustment_Group_Code"
+                                }, {
+                                  "name" : "Claim_Adjustment_Reason_Code",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element Claim_Adjustment_Reason_Code"
+                                }, {
+                                  "name" : "Monetary_Amount",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Monetary_Amount"
+                                }, {
+                                  "name" : "Quantity",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Quantity"
+                                }, {
+                                  "name" : "Claim_Adjustment_Reason_Code_2",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element Claim_Adjustment_Reason_Code_2"
+                                }, {
+                                  "name" : "Monetary_Amount_2",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Monetary_Amount_2"
+                                }, {
+                                  "name" : "Quantity_2",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Quantity_2"
+                                }, {
+                                  "name" : "Claim_Adjustment_Reason_Code_3",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element Claim_Adjustment_Reason_Code_3"
+                                }, {
+                                  "name" : "Monetary_Amount_3",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Monetary_Amount_3"
+                                }, {
+                                  "name" : "Quantity_3",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Quantity_3"
+                                }, {
+                                  "name" : "Claim_Adjustment_Reason_Code_4",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element Claim_Adjustment_Reason_Code_4"
+                                }, {
+                                  "name" : "Monetary_Amount_4",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Monetary_Amount_4"
+                                }, {
+                                  "name" : "Quantity_4",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Quantity_4"
+                                }, {
+                                  "name" : "Claim_Adjustment_Reason_Code_5",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element Claim_Adjustment_Reason_Code_5"
+                                }, {
+                                  "name" : "Monetary_Amount_5",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Monetary_Amount_5"
+                                }, {
+                                  "name" : "Quantity_5",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Quantity_5"
+                                }, {
+                                  "name" : "Claim_Adjustment_Reason_Code_6",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element Claim_Adjustment_Reason_Code_6"
+                                }, {
+                                  "name" : "Monetary_Amount_6",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Monetary_Amount_6"
+                                }, {
+                                  "name" : "Quantity_6",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element Quantity_6"
+                                } ]
+                              }
+                            },
+                            "source" : "element Line_Adjustment"
+                          }, {
+                            "name" : "Line_Adjudication_Date",
+                            "type" : {
+                              "type" : "record",
+                              "name" : "type143",
+                              "fields" : [ {
+                                "name" : "Date_Time_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Date_Time_Qualifier"
+                              }, {
+                                "name" : "Date_Time_Period_Format_Qualifier",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Date_Time_Period_Format_Qualifier"
+                              }, {
+                                "name" : "Date_Time_Period",
+                                "type" : [ "null", "string" ],
+                                "source" : "element Date_Time_Period"
+                              } ]
+                            },
+                            "source" : "element Line_Adjudication_Date"
+                          } ]
+                        }
+                      },
+                      "source" : "element L2430"
+                    } ]
+                  }
+                },
+                "source" : "element L2400"
+              } ]
+            }
+          },
+          "source" : "element L2300"
+        } ]
+      }
+    },
+    "source" : "element L2000C"
+  }, {
+    "name" : "Transaction_Set_Trailer",
+    "type" : {
+      "type" : "record",
+      "name" : "type144",
+      "fields" : [ {
+        "name" : "Number_of_Included_Segments",
+        "type" : [ "null", "long" ],
+        "source" : "element Number_of_Included_Segments"
+      }, {
+        "name" : "Transaction_Set_Control_Number",
+        "type" : [ "null", "string" ],
+        "source" : "element Transaction_Set_Control_Number"
+      } ]
+    },
+    "source" : "element Transaction_Set_Trailer"
+  }, {
+    "name" : "Functional_Group_Trailer",
+    "type" : {
+      "type" : "record",
+      "name" : "type145",
+      "fields" : [ {
+        "name" : "Number_of_Transaction_Sets_Included",
+        "type" : [ "null", "long" ],
+        "source" : "element Number_of_Transaction_Sets_Included"
+      }, {
+        "name" : "Group_Control_Number",
+        "type" : [ "null", "long" ],
+        "source" : "element Group_Control_Number"
+      } ]
+    },
+    "source" : "element Functional_Group_Trailer"
+  }, {
+    "name" : "Interchange_Control_Trailer",
+    "type" : {
+      "type" : "record",
+      "name" : "type146",
+      "fields" : [ {
+        "name" : "Number_of_Included_Functional_Groups",
+        "type" : [ "null", "long" ],
+        "source" : "element Number_of_Included_Functional_Groups"
+      }, {
+        "name" : "Interchange_Control_Number",
+        "type" : [ "null", "long" ],
+        "source" : "element Interchange_Control_Number"
+      } ]
+    },
+    "source" : "element Interchange_Control_Trailer"
+  } ]
+}

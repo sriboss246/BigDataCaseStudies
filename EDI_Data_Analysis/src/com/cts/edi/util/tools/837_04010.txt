@@ -1,0 +1,813 @@
+Loop	Start	ediroot		Required	1								
+Segment		ISA	Interchange Control Header	Required	1								
+Element		ISA01	Authorization Information Qualifier	Required		2	2	ID			00, 03		
+Element		ISA02	Authorization Information	Required		10	10	AN					
+Element		ISA03	Security Information Qualifier	Required		2	2	ID			00, 01		
+Element		ISA04	Security Information	Required		10	10	AN					
+Element		ISA05	Interchange Sender ID Qualifier	Required		2	2	ID			01, 14, 20, 27, 28, 29, 30, 33, ZZ		
+Element		ISA06	Interchange Sender ID	Required		15	15	AN					
+Element		ISA07	Interchange Receiver ID Qualifier	Required		2	2	ID			01, 14, 20, 27, 28, 29, 30, 33, ZZ		
+Element		ISA08	Interchange Receiver ID	Required		15	15	AN					
+Element		ISA09	Interchange Date	Required		6	6	DT		YYMMDD			
+Element		ISA10	Interchange Time	Required		4	4	TM		HHMM			
+Element		ISA11	Interchange Control Standards Identifier	Required		1	1	ID			U		
+Element		ISA12	Interchange Control Version Number	Required		5	5	ID			00401		
+Element		ISA13	Interchange Control Number	Required		9	9	N	0				
+Element		ISA14	Acknowledgment Requested	Required		1	1	ID			0, 1		
+Element		ISA15	Usage Indicator	Required		1	1	ID			P, T		
+Element		ISA16	Component Element Separator	Required		1	1	AN					
+													
+Segment		TA1	Interchange Acknowledgement	Optional	unbounded								
+Element		TA101	Interchange Control Number	Required		9	9	N	0				
+Element		TA102	Interchange Date	Required		6	6	DT		YYMMDD			
+Element		TA103	Interchange Time	Required		4	4	TM		HHMM			
+Element		TA104	Interchange Acknowledgement Code	Required		1	1	ID			A, E, R		
+Element		TA105	Interchange Note Code	Required		3	3	ID			000, 001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031		
+													
+Segment		GS	Functional Group Header	Required	1								
+Element		GS01	Functional Identifier Code	Required		2	2	ID		HC			
+Element		GS02	Application Sender Code	Required		2	15	AN					
+Element		GS03	Application Receiver Code	Required		2	15	AN					
+Element		GS04	Date	Required		8	8	DT		YYYYMMDD			
+Element		GS05	Time	Required		4	8	TM		HHMM			
+Element		GS06	Group Control Number	Required		1	9	N	0				
+Element		GS07	Responsible Agency Code	Required		1	2	ID			X		
+Element		GS08	Version Release Industry Identifier Code	Required		1	12	AN			004010X098A1		
+													
+Segment		ST	Transaction Set Header	Required	1								
+Element		ST01	Transaction Set Identifier Code	Required		3	3	ID			837		
+Element		ST02	Transaction Set Control Number	Required		4	9	AN					
+													
+Segment		BHT	Beginning of Hierarchical Transaction	Required	1								
+Element		BHT01	Hierarchical Structure Code	Required		4	4	ID			0019		
+Element		BHT02	Transaction Set Purpose Code	Required		2	2	ID			00, 18		
+Element		BHT03	Reference Identification	Required		1	30	AN					
+Element		BHT04	Date	Required		8	8	DT		YYYYMMDD			
+Element		BHT05	Time	Required		4	8	TM		HHMM, HHMMSS, HHMMSSD, HHMMSSDD			
+Element		BHT06	Transaction Type Code	Required		2	2	ID			CH, RP		
+													
+Segment		REF	Transmission Type Identification	Required	1								
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			87		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	Start	L1000A		Required	1							NM1/NM101	41
+													
+Segment		NM1	Submitter Name	Required	1							NM101	41
+Element		NM101	Entity Identifier Code	Required		2	3	ID			41		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			2		
+Element		NM103	Name Last Organization Name	Required		1	35	AN					
+Element		NM104	Name First	Optional		1	25	AN					
+Element		NM105	Name Middle	Optional		1	25	AN					
+Element		NM108	Identification Code Qualifier	Required		1	2	ID			46		
+Element		NM109	Identification Code	Required		2	80	AN					
+													
+Segment		PER	Submitter EDI Contact Information	Required	2								
+Element		PER01	Contact Function Code	Required		2	2	ID			IC		
+Element		PER02	Name	Required		1	60	AN					
+Element		PER03	Communication Number Qualifier	Required		2	2	ID			TE		
+Element		PER04	Communication Number	Required		1	80	AN					
+Element		PER05	Communication Number Qualifier 2	Optional		2	2	ID			ED, EM, EX, FX, TE		
+Element		PER06	Communication Number 2	Optional		1	80	AN					
+Element		PER07	Communication Number Qualifier 3	Optional		2	2	ID			ED, EM, EX, FX, TE		
+Element		PER08	Communication Number 3	Optional		1	80	AN					
+													
+Loop	End	L1000A		0	0								
+													
+Loop	Start	L1000B		Required	1							NM/NM101	40
+													
+Segment		NM1	Receiver Name	Required	1							NM101	40
+Element		NM101	Entity Identifier Code	Required		2	3	ID			40		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			2		
+Element		NM103	Name Organization Name	Required		1	35	AN					
+Element		NM108	Identification Code Qualifier	Required		1	2	ID			46		
+Element		NM109	Identification Code	Required		2	80	AN					
+													
+Loop	End	L1000B		0	0								
+													
+Loop	Start	L2000A		Required	unbounded							HL/HL03	20
+Segment		HL	Billing Pay-to Provider Hierarchical Level	Required	1							HL03	20
+Element		HL01	Hierarchical ID Number	Required		1	12	AN					
+Element		HL03	Hierarchical Level Code	Required		1	2	ID			20		
+Element		HL04	Hierarchical Child Code	Required		1	1	ID			1		
+													
+Segment		PRV	Billing Pay-to Provider Specialty Information	Optional	1								
+Element		PRV01	Provider Code	Required		1	3	ID			BI, PT		
+Element		PRV02	Reference Identification Qualifier	Required		2	3	ID			ZZ		
+Element		PRV03	Reference Identification	Required		1	30	AN					
+													
+Loop	Start	L2010AA		Required	1							NM1/NM101	85
+													
+Segment		NM1	Billing Provider Name	Required	1							NM101	85
+Element		NM101	Entity Identifier Code	Required		2	3	ID			85		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1, 2		
+Element		NM103	Name Last Organization Name	Required		1	35	AN					
+Element		NM104	Name First	Optional		1	25	AN					
+Element		NM105	Name Middle	Optional		1	25	AN					
+Element		NM107	Name Suffix	Optional		1	10	AN					
+Element		NM108	Identification Code Qualifier	Required		1	2	ID			24, XX		
+Element		NM109	Identification Code	Required		2	80	AN					
+													
+Segment		N3	Billing Provider Address	Required	1								
+Element		N301	Address Information	Required		1	55	AN					
+Element		N302	Address Information 2	Optional		1	55	AN					
+													
+Segment		N4	Billing Provider City State ZIP Code	Required	1								
+Element		N401	City Name	Required		2	30	AN					
+Element		N402	State Province Code	Required		2	2	ID					
+Element		N403	Postal Code	Required		3	15	ID					
+Element		N404	Country Code	Optional		2	3	ID					
+													
+Segment		REF	Billing Provider Secondary Identification	Optional	8							REF01	1B, EI, G2
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			1B, EI, G2		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2010AA		0	0								
+													
+Loop	End	L2000A		0	0								
+													
+Loop	Start	L2000B		Required	unbounded							HL/HL03	22
+Segment		HL	Subscriber Hierarchical Level	Required	1							HL03	22
+Element		HL01	Hierarchical ID Number	Required		1	12	AN					
+Element		HL02	Hierarchical Parent ID Number	Required		1	12	AN					
+Element		HL03	Hierarchical Level Code	Required		1	2	ID			22		
+Element		HL04	Hierarchical Child Code	Required		1	1	ID			0, 1		
+													
+Segment		SBR	Subscriber Information	Required	1								
+Element		SBR01	Payer Responsibility Sequence Number Code	Required		1	1	ID			P, S		
+Element		SBR02	Individual Relationship Code	Optional		2	2	ID			18		
+Element		SBR03	Reference Identification	Optional		1	30	AN					
+Element		SBR09	Claim Filing Indicator Code	Optional		1	2	ID			09, 10, 11, 12, 13, 14, 15, 16, AM, BL, CH, CI, DS, HM, LI, LM, MB, MC, OF, TV, VA, WC, ZZ		
+													
+Segment		PAT	Patient Information	Optional	1								
+Element		PAT05	Date Time Period Format Qualifier	Optional		2	3	ID		YYYYMMDD	D8		
+Element		PAT06	Date Time Period	Optional		1	35	AN					
+Element		PAT07	Unit Basis for Measurement Code	Optional		2	2	ID			01		
+Element		PAT08	Weight	Optional		1	10	R					
+Element		PAT09	Condition Response Code	Optional		1	1	ID			Y		
+													
+													
+Loop	Start	L2010BA		Required	1							NM1/NM101	IL
+Segment		NM1	Subscriber Name	Required	1							NM101	IL
+Element		NM101	Entity Identifier Code	Required		2	3	ID			IL		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1,2		
+Element		NM103	Name Last Organization Name	Required		1	35	AN					
+Element		NM104	Name First	Optional		1	25	AN					
+Element		NM105	Name Middle	Optional		1	25	AN					
+Element		NM107	Name Suffix	Optional		1	10	AN					
+Element		NM108	Identification Code Qualifier	Optional		1	2	ID			MI		
+Element		NM109	Identification Code	Optional		2	80	AN					
+													
+Segment		N3	Subscriber Address	Optional	1								
+Element		N301	Address Information	Required		1	55	AN					
+Element		N302	Address Information 2	Optional		1	55	AN					
+													
+Segment		N4	Subscriber City State ZIP Code	Optional	1								
+Element		N401	City Name	Required		2	30	AN					
+Element		N402	State Province Code	Required		2	2	ID					
+Element		N403	Postal Code	Required		3	15	ID					
+Element		N404	Country Code	Optional		2	3	ID					
+													
+Segment		DMG	Subscriber Demographic Information	Optional	1								
+Element		DMG01	Date Time Period Format Qualifier	Required		2	3	ID		YYYYMMDD	D8		
+Element		DMG02	Date Time Period	Required		1	35	AN					
+Element		DMG03	Gender Code	Required		1	1	ID			F,M,U		
+													
+Loop	End	L2010BA		0	0								
+													
+Loop	Start	L2010BB		Required	1							NM1/NM101	PR
+Segment		NM1	Payer Name	Required	1							NM101	PR
+Element		NM101	Entity Identifier Code	Required		2	3	ID			PR		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			2		
+Element		NM103	Name Last Organization Name	Required		1	35	AN					
+Element		NM108	Identification Code Qualifier	Required		1	2	ID			PI		
+Element		NM109	Identification Code	Required		2	80	AN					
+													
+Segment		N3	Payer Address	Optional	1								
+Element		N301	Address Information	Required		1	55	AN					
+Element		N302	Address Information 2	Optional		1	55	AN					
+													
+Segment		N4	Payer City State ZIP Code	Optional	1								
+Element		N401	City Name	Required		2	30	AN					
+Element		N402	State Province Code	Required		2	2	ID					
+Element		N403	Postal Code	Required		3	15	ID					
+Element		N404	Country Code	Optional		2	3	ID					
+													
+Loop	End	L2010BB		0	0								
+													
+Loop	End	L2000B		0	0								
+													
+Loop	Start	L2000C		Required	unbounded							HL/HL03	23
+													
+Segment		HL	Patient Hierarchical Level	Optional	1							HL03	23
+Element		HL01	Hierarchical ID Number	Required		1	12	AN					
+Element		HL02	Hierarchical Parent ID Number	Required		1	12	AN					
+Element		HL03	Hierarchical Level Code	Required		1	2	ID			23		
+Element		HL04	Hierarchical Child Code	Required		1	1	ID			0		
+													
+Segment		PAT	Patient Information	Required	1								
+Element		PAT01	Individual Relationship Code	Required		2	2	ID			01,04,05,07,09,10,15,17,19,20,21,22,23,24,29,32,33,34,36,39,40,41,43,53,G8		
+Element		PAT05	Date Time Period Format Qualifier	Optional		2	3	ID		YYYYMMDD	D8		
+Element		PAT06	Date Time Period	Optional		1	35	AN					
+Element		PAT07	Unit Basis for Measurement Code	Optional		2	2	ID			01		
+Element		PAT08	Weight	Optional		1	10	R					
+Element		PAT09	Condition Response Code	Optional		1	1	ID			Y		
+													
+Loop	Start	L2010CA		Required	1								
+Segment		NM1	Patient Name	Required	1							NM101	QC
+Element		NM101	Entity Identifier Code	Required		2	3	ID			QC		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1		
+Element		NM103	Name Last Organization Name	Required		1	35	AN					
+Element		NM104	Name First	Required		1	25	AN					
+Element		NM105	Name Middle	Optional		1	25	AN					
+Element		NM107	Name Suffix	Optional		1	10	AN					
+Element		NM108	Identification Code Qualifier	Optional		1	2	ID			MI		
+Element		NM109	Identification Code	Optional		2	80	AN					
+													
+Segment		N3	Patient Address	Required	1								
+Element		N301	Address Information	Required		1	55	AN					
+Element		N302	Address Information 2	Optional		1	55	AN					
+													
+Segment		N4	Patient City State ZIP Code	Required	1								
+Element		N401	City Name	Required		2	30	AN					
+Element		N402	State Province Code	Required		2	2	ID					
+Element		N403	Postal Code	Required		3	15	ID					
+Element		N404	Country Code	Optional		2	3	ID					
+													
+Segment		DMG	Patient Demographic Information	Required	1								
+Element		DMG01	Date Time Period Format Qualifier	Required		2	3	ID		YYYYMMDD	D8		
+Element		DMG02	Date Time Period	Required		1	35	AN					
+Element		DMG03	Gender Code	Required		1	1	ID			F,M,U		
+													
+Loop	End	L2010CA		0	0								
+													
+Loop	Start	L2300		Required	100								
+Segment		CLM	Claim Information	Required	1								
+Element		CLM01	Claim Submitters Identifier	Required		1	38	AN					
+Element		CLM02	Monetary Amount	Required		1	18	R					
+Element		CLM05	Health Care Service Location Information	Required				Comp					
+Sub-Element		CLM051	Facility Code Value	Required		1	2	AN					
+Sub-Element		CLM052	Claim Frequency Type Code	Required		1	1	ID					
+Element		CLM06	Condition Response Code	Required		1	1	ID			N,Y		
+Element		CLM07	Provider Accept Assignment Code	Required		1	1	ID			A,B,C,P		
+Element		CLM08	Condition Response Code 2	Required		1	1	ID			N,Y		
+Element		CLM09	Release of Information Code	Required		1	1	ID			A,I,M,N,O,Y		
+Element		CLM10	Patient Signature Source Code	Optional		1	1	ID			B,C,M,P,S		
+Element		CLM11	Related Causes Information	Optional				Comp					
+Sub-Element		CLM111	Related-Causes Code	Required		2	3	ID			AA,AP,EM,OA		
+Sub-Element		CLM112	Related-Causes Code 2	Optional		2	3	ID			AA,AP,EM,OA		
+Sub-Element		CLM113	Related-Causes Code 3	Optional		2	3	ID			AA,AP,EM,OA		
+Sub-Element		CLM114	State Province Code	Optional		2	2	ID					
+Sub-Element		CLM115	Country Code	Optional		2	3	ID					
+Element		CLM12	Special Program Code	Optional		2	3	ID			01,02,03,05,07,08,09		
+Element		CLM16	Provider Agreement Code	Optional		1	1	ID			P		
+Element		CLM20	Delay Reason Code	Optional		1	2	ID			1,2,3,4,5,6,7,8,9,10,11		
+													
+Segment		DTP	 Initial Treatment	Optional	1							DTP01	454
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			454		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Date Last Seen	Optional	1							DTP01	304
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			304		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Onset of Current Illness Symptom	Optional	1							DTP01	431
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			431		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Similar Illness Symptom Onset	Optional	10							DTP01	438
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			438		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Accident	Optional	10							DTP01	439
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			439		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			DT, D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Last Menstrual Period	Optional	1							DTP01	484
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			484		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Last X-ray	Optional	1							DTP01	455
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			455		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Last Worked	Optional	1							DTP01	297
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			297		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Authorized Return to Work	Optional	1							DTP01	296
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			296		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Admission	Optional	1							DTP01	435
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			435		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Discharge	Optional	1							DTP01	096
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			096		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		PWK	Claim Supplemental Information	Optional	10								
+Element		PWK01	Report Type Code	Required		2	2	ID			77, AS, B2, B3, B4, CT, DA, DG, DS, EB, MT, NN, OB, OZ, PN, PO, PZ, RB, RR, RT		
+Element		PWK02	Report Transmission Code	Required		1	2	ID			AA, BM, EL, EM, FX		
+Element		PWK05	Identification Code Qualifier	Optional		1	2	ID			AC		
+Element		PWK06	Identification Code	Optional		2	80	AN					
+													
+Segment		AMT	Patient Amount Paid	Optional	1								
+Element		AMT01	Amount Qualifier Code	Required		1	3	ID					
+Element		AMT02	Monetary Amount	Required		1	18	R					
+													
+Segment		REF	Mammography Certification Number	Optional	1							REF01	EW
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			EW		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Segment		REF	Prior Authorization Referral Number	Optional	2							REF01	9F, G1
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			9F, G1		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Segment		NTE	Claim Note	Optional	1								
+Element		NTE01	Note Reference Code	Required		3	3	ID			ADD, CER, DCP, DGN, PMT, TPO		
+Element		NTE02	Desciption	Required		1	80	AN					
+													
+Segment		CR1	Ambulance Transport Information	Optional	1								
+Element		CR101	Unit Basis for Measurement Code	Optional		2	2	ID			LB		
+Element		CR102	Weight	Optional		1	10	R					
+Element		CR103	Ambulance Transport Code	Required		1	1	ID			I, R, T, X		
+Element		CR104	Ambulance Transport Reason Code	Required		1	1	ID			A, B, C, D, E		
+Element		CR105	Unit Basis for Measurement Code 2	Required		2	2	ID			DH		
+Element		CR106	Quantity	Required		1	15	R					
+Element		CR109	Desciption	Optional		1	80	AN					
+Element		CR110	Desciption 2	Optional		1	80	AN					
+													
+Segment		CRC	Ambulance Certification	Optional	3							CRC101	07
+Element		CRC01	Code Category	Required		2	2	ID			07		
+Element		CRC02	Condition Response Code	Required		1	1	ID			Y, N		
+Element		CRC03	Condition Indicator	Required		2	2	ID			01, 02, 03, 04, 05, 06, 07, 08, 09, 60		
+Element		CRC04	Condition Indicator 2	Optional		2	2	ID			01, 02, 03, 04, 05, 06, 07, 08, 09, 60		
+Element		CRC05	Condition Indicator 3	Optional		2	2	ID			01, 02, 03, 04, 05, 06, 07, 08, 09, 60		
+Element		CRC06	Condition Indicator 4	Optional		2	2	ID			01, 02, 03, 04, 05, 06, 07, 08, 09, 60		
+Element		CRC07	Condition Indicator 5	Optional		2	2	ID			01, 02, 03, 04, 05, 06, 07, 08, 09, 60		
+													
+Segment		CRC	EPSDT Referral	Optional	1							CRC101	ZZ
+Element		CRC01	Code Category	Required		2	2	ID			ZZ		
+Element		CRC02	Condition Response Code	Required		1	1	ID			Y, N		
+Element		CRC03	Condition Indicator	Required		2	2	ID			AV, NU, S2, ST		
+Element		CRC04	Condition Indicator 2	Optional		2	2	ID			AV, NU, S2, ST		
+Element		CRC05	Condition Indicator 3	Optional		2	2	ID			AV, NU, S2, ST		
+													
+Segment		HI	Health Care Diagnosis Code	Optional	1								
+Element		HI01	Health Care Code Information	Required				Comp					
+Sub-Element		HI011	Code List Qualifier Code	Required		1	3	ID			BK		
+Sub-Element		HI012	Industry Code	Required		1	30	AN					
+Element		HI02	Health Care Code Information 2	Optional				Comp					
+Sub-Element		HI021	Code List Qualifier Code	Required		1	3	ID			BF		
+Sub-Element		HI022	Industry Code	Required		1	30	AN					
+Element		HI03	Health Care Code Information 3	Optional				Comp					
+Sub-Element		HI031	Code List Qualifier Code	Required		1	3	ID			BF		
+Sub-Element		HI032	Industry Code	Required		1	30	AN					
+Element		HI04	Health Care Code Information 4	Optional				Comp					
+Sub-Element		HI041	Code List Qualifier Code	Required		1	3	ID			BF		
+Sub-Element		HI042	Industry Code	Required		1	30	AN					
+Element		HI05	Health Care Code Information 5	Optional				Comp					
+Sub-Element		HI051	Code List Qualifier Code	Required		1	3	ID			BF		
+Sub-Element		HI052	Industry Code	Required		1	30	AN					
+Element		HI06	Health Care Code Information 6	Optional				Comp					
+Sub-Element		HI061	Code List Qualifier Code	Required		1	3	ID			BF		
+Sub-Element		HI062	Industry Code	Required		1	30	AN					
+Element		HI07	Health Care Code Information 7	Optional				Comp					
+Sub-Element		HI071	Code List Qualifier Code	Required		1	3	ID			BF		
+Sub-Element		HI072	Industry Code	Required		1	30	AN					
+Element		HI08	Health Care Code Information 8	Optional				Comp					
+Sub-Element		HI081	Code List Qualifier Code	Required		1	3	ID			BF		
+Sub-Element		HI082	Industry Code	Required		1	30	AN					
+													
+Loop	Start	L2305		Optional	6								
+Segment		CR7	Home Health Care Plan Information	Optional	1								
+Element		CR701	Discipline Type Code	Required		2	2	ID			AI,MS,OT,PT,SN,ST		
+Element		CR702	Number	Required		1	9	N	0				
+Element		CR703	Number 2	Required		1	9	N	0				
+													
+Segment		HSD	Health Care Services Delivery	Optional	3								
+Element		HSD01	Quantity Qualifier	Optional		2	2	ID			VS		
+Element		HSD02	Quantity	Optional		1	15	R					
+Element		HSD03	Unit Basis for Measurement Code	Optional		2	2	ID			DA,MO,Q1,WK		
+Element		HSD04	Sample Selection Modulus	Optional		1	16	R					
+Element		HSD05	Time Period Qualifier	Optional		1	2	ID			7,35		
+Element		HSD06	Number of Periods	Optional		1	3	N	0				
+Element		HSD07	Ship Delivery or Calendar Pattern Code	Optional		1	2	ID			1,2,3,4,5,6,7,A,B,C,D,E,F,G,H,J,K,L,N,O,S,W,SA,SB,SC,SD,SG,SL,SP,SX,SY,SZ		
+Element		HSD08	Ship Delivery Pattern Time Code	Optional		1	1	ID			D,E,F		
+													
+Loop	End	L2305		0	0								
+													
+Loop	Start	L2310A		Optional	2							NM1/NM101	DN,P3
+													
+Segment		NM1	Referring Provider Name	Optional	1							NM101	DN,P3
+Element		NM101	Entity Identifier Code	Required		2	3	ID			DN,P3		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1,2		
+Element		NM103	Name Last or Organization Name	Required		1	35	AN					
+Element		NM104	Name First	Optional		1	25	AN					
+Element		NM105	Name Middle	Optional		1	25	AN					
+Element		NM107	Name Suffix	Optional		1	10	AN					
+Element		NM108	Identification Code Qualifier	Optional		1	2	ID			24,XX		
+Element		NM109	Identification Code	Optional		2	80	AN					
+													
+Segment		PRV	Referring Provider Specialty Information	Optional	1								
+Element		PRV01	Provider Code	Required		1	3	ID			RF		
+Element		PRV02	Reference Identification Qualifier	Required		2	3	ID			ZZ		
+Element		PRV03	Reference Identification	Required		1	30	AN					
+													
+Segment		REF	Referring Provider Secondary Identification	Optional	5							REF01	1B,EI,G2
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			1B,EI,G2		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2310A		0	0								
+													
+Loop	Start	L2310B		Optional	1							NM1/NM101	82
+													
+Segment		NM1	Rendering Provider Name	Optional	1							NM101	82
+Element		NM101	Entity Identifier Code	Required		2	3	ID			82		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1,2		
+Element		NM103	Name Last or Organization Name	Required		1	35	AN					
+Element		NM104	Name First	Optional		1	25	AN					
+Element		NM105	Name Middle	Optional		1	25	AN					
+Element		NM107	Name Suffix	Optional		1	10	AN					
+Element		NM108	Identification Code Qualifier	Required		1	2	ID			24,XX		
+Element		NM109	Identification Code	Required		2	80	AN					
+													
+Segment		PRV	Rendering Provider Specialty Information	Optional	1								
+Element		PRV01	Provider Code	Required		1	3	ID			PE		
+Element		PRV02	Reference Identification Qualifier	Required		2	3	ID			ZZ		
+Element		PRV03	Reference Identification	Required		1	30	AN					
+													
+Segment		REF	Rendering Provider Secondary Identification	Optional	5							REF01	1B,EI,G2
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			1B,EI,G2		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2310B		0	0								
+													
+Loop	Start	L2310D		Optional	1							NM1/NM101	77,FA,LI,TL
+													
+Segment		NM1	Service Facility Location	Optional	1							NM101	77,FA,LI,TL
+Element		NM101	Entity Identifier Code	Required		2	3	ID			77,FA,LI,TL		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			2		
+Element		NM103	Name Last or Organization Name	Optional		1	35	AN					
+Element		NM108	Identification Code Qualifier	Optional		1	2	ID			24,XX		
+Element		NM109	Identification Code	Optional		2	80	AN					
+													
+Segment		N3	Service Facility Location Address	Required	1								
+Element		N301	Address Information	Required		1	55	AN					
+Element		N302	Address Information 2	Optional		1	55	AN					
+													
+Segment		N4	Service Facility Location City State ZIP	Required	1								
+Element		N401	City Name	Required		2	30	AN					
+Element		N402	State or Province Code	Required		2	2	ID					
+Element		N403	Postal Code	Required		3	15	ID					
+Element		N404	Country Code	Optional		2	3	ID					
+													
+Segment		REF	Service Facility Location Secondary Identification	Optional	5							REF01	1B,EI,G2
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			1B,EI,G2		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2310D		0	0								
+													
+Loop	Start	L2320		Optional	10								
+													
+Segment		SBR	Other Subscriber Information	Optional	1								
+Element		SBR01	Payer Responsibility Sequence Number Code	Required		1	1	ID			P,S,T		
+Element		SBR02	Individual Relationship Code	Required		2	2	ID			01,04,05,07,1015,17,18,19,20,21,22,23,24,29,32,33,36,39,40,41,43,53,G8		
+Element		SBR03	Reference Identification	Optional		1	30	AN					
+Element		SBR04	Name	Optional		1	60	AN					
+Element		SBR05	Insurance Type Code	Required		1	3	ID			AP,C1,CP,GP,HM,IP,LD,LT,MB,MC,MI,MP,OT,PP,SP		
+Element		SBR09	Claim Filing Indicator Code	Optional		1	2	ID			09,10,11,12,13,14,15,16,AM,BL,CH,CIDS,HM,LI,LM,MB,MC,OF,TV,VA,WC,ZZ		
+													
+Segment		CAS	Claim Level Adjustments	Optional	5								
+Element		CAS01	Claim Adjustment Group Code	Required		1	2	ID			CO,CR,OA,PI,PR		
+Element		CAS02	Claim Adjustment Reason Code	Required		1	5	ID					
+Element		CAS03	Monetary Amount	Required		1	18	R					
+Element		CAS04	Quantity	Optional		1	15	R					
+Element		CAS05	Claim Adjustment Reason Code  2	Optional		1	5	ID					
+Element		CAS06	Monetary Amount 2	Optional		1	18	R					
+Element		CAS07	Quantity 2	Optional		1	15	R					
+Element		CAS08	Claim Adjustment Reason Code 3	Optional		1	5	ID					
+Element		CAS09	Monetary Amount 3	Optional		1	18	R					
+Element		CAS10	Quantity 3	Optional		1	15	R					
+Element		CAS11	Claim Adjustment Reason Code 4	Optional		1	5	ID					
+Element		CAS12	Monetary Amount 4	Optional		1	18	R					
+Element		CAS13	Quantity 4	Optional		1	15	R					
+Element		CAS14	Claim Adjustment Reason Code 5	Optional		1	5	ID					
+Element		CAS15	Monetary Amount 5	Optional		1	18	R					
+Element		CAS16	Quantity 5	Optional		1	15	R					
+Element		CAS17	Claim Adjustment Reason Code 6	Optional		1	5	ID					
+Element		CAS18	Monetary Amount 6	Optional		1	18	R					
+Element		CAS19	Quantity 6	Optional		1	15	R					
+													
+Segment		AMT	COB Payer Paid Amount	Optional	1							AMT01	D
+Element		AMT01	Amount Qualifier Code	Required		1	3	ID			D		
+Element		AMT02	Monetary Amount	Required		1	18	R					
+													
+Segment		AMT	COB Allowed Amount	Optional	1							AMT01	B6
+Element		AMT01	Amount Qualifier Code	Required		1	3	ID			B6		
+Element		AMT02	Monetary Amount	Required		1	18	R					
+													
+Segment		AMT	COB Patient Responsibility Amount	Optional	1							AMT01	F2
+Element		AMT01	Amount Qualifier Code	Required		1	3	ID			F2		
+Element		AMT02	Monetary Amount	Required		1	18	R					
+													
+Segment		AMT	COB Patient Paid Amount	Optional	1							AMT01	F5
+Element		AMT01	Amount Qualifier Code	Required		1	3	ID			F5		
+Element		AMT02	Monetary Amount	Required		1	18	R					
+													
+Segment		DMG	Subscriber Demographic Information	Optional	1								
+Element		DMG01	Date Time Period Format Qualifier	Required		2	3	ID		YYYYMMDD	D8		
+Element		DMG02	Date Time Period	Required		1	35	AN					
+Element		DMG03	Gender Code	Required		1	1	ID			F,M,U		
+													
+Segment		OI	Other Insurance Coverage Information	Required	1								
+Element		OI03	Condition Response Code	Required		1	1	ID			N,Y		
+Element		OI04	Patient Signature Source Code	Optional		1	1	ID			B,C,M,P,S		
+Element		OI06	Release of Information Code	Required		1	1	ID			A,I,M,N,O,Y		
+													
+Loop	Start	L2330A		Required	1							NM1/NM101	IL
+													
+Segment		NM1	Other Subscriber Name	Required	1							NM101	IL
+Element		NM101	Entity Identifier Code	Required		2	3	ID			IL		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1,2		
+Element		NM103	Name Last or Organization Name	Required		1	35	AN					
+Element		NM104	Name First	Optional		1	25	AN					
+Element		NM105	Name Middle	Optional		1	25	AN					
+Element		NM107	Name Suffix	Optional		1	10	AN					
+Element		NM108	Identification Code Qualifier	Required		1	2	ID			MI		
+Element		NM109	Identification Code	Required		2	80	AN					
+													
+Segment		N3	Other Subscriber Address	Optional	1								
+Element		N301	Address Information	Required		1	55	AN					
+Element		N302	Address Information 2	Optional		1	55	AN					
+													
+Segment		N4	Other Subscriber City State ZIP Code	Optional	1								
+Element		N401	City Name	Optional		2	30	AN					
+Element		N402	State or Province Code	Optional		2	2	ID					
+Element		N403	Postal Code	Optional		3	15	ID					
+Element		N404	Country Code	Optional		2	3	ID					
+													
+Loop	End	L2330A		0	0								
+													
+Loop	Start	L2330B		Required	1							NM1/NM101	PR
+													
+Segment		NM1	Other Payer Name	Required	1							NM101	PR
+Element		NM101	Entity Identifier Code	Required		2	3	ID			PR		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			2		
+Element		NM103	Name Last or Organization Name	Required		1	35	AN					
+Element		NM108	Identification Code Qualifier	Required		1	2	ID			PI		
+Element		NM109	Identification Code	Required		2	80	AN					
+													
+Segment		PER	Other Payer Contact Information	Optional	2								
+Element		PER01	Contact Function Code	Required		2	2	ID			IC		
+Element		PER02	Name	Required		1	60	AN					
+Element		PER03	Communication Number Qualifier	Required		2	2	ID			ED,EM,FX,TE		
+Element		PER04	Communication Number	Required		1	80	AN					
+Element		PER05	Communication Number Qualifier 2	Optional		2	2	ID			ED,EM,EX,FX,TE		
+Element		PER06	Communication Number 2	Optional		1	80	AN					
+Element		PER07	Communication Number Qualifier 3	Optional		2	2	ID			ED,EM,EX,FX,TE		
+Element		PER08	Communication Number 3	Optional		1	80	AN					
+													
+Segment		DTP	Claim Adjudication Date	Optional	1								
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			573		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID		YYYYMMDD	D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		REF	Other Payer Secondary Identifier	Optional	2							REF01	2U,F8,FY,NF,TJ
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			2U,F8,FY,NF,TJ		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Segment		REF	Other Payer Prior Authorization or Referral Number	Optional	2							REF01	9F,G1
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			9F,G1		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Segment		REF	Other Payer Claim Adjustment Indicator	Optional	2							REF01	T4
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			T4		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2330B		0	0								
+													
+Loop	Start	L2330C		Optional	1							NM1/NM101	QC
+													
+Segment		NM1	Other Payer Patient Information	Optional	1							NM101	QC
+Element		NM101	Entity Identifier Code	Required		2	3	ID			QC		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1		
+Element		NM108	Identification Code Qualifier	Required		1	2	ID			MI		
+Element		NM109	Identification Code	Required		2	80	AN					
+													
+Segment		REF	Other Payer Patient Identification	Optional	3							REF01	1W
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			1W		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2330C		0	0								
+													
+Loop	Start	L2330D		Optional	2							NM1/NM101	DN, P3
+													
+Segment		NM1	Other Payer Referring Provider	Optional	1							NM101	DN, P3
+Element		NM101	Entity Identifier Code	Required		2	3	ID			DN, P3		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1, 2		
+													
+Segment		REF	Other Payer Referring Provider Identification	Required	3								
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			EI, G2		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2330D		0	0								
+													
+Loop	Start	L2330E		Optional	1							NM1/NM101	82
+													
+Segment		NM1	Other Payer Rendering Provider	Optional	1							NM101	82
+Element		NM101	Entity Identifier Code	Required		2	3	ID			82		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1, 2		
+													
+Segment		REF	Other Payer Rendering Provider Secondary Identification	Required	3							REF01	1B, EI, G2
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			1B, EI, G2		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2330E		0	0								
+													
+Loop	Start	L2330F		Optional	1							NM1/NM101	QB
+													
+Segment		NM1	Other Payer Purchased Service Provider	Optional	1							NM101	QB
+Element		NM101	Entity Identifier Code	Required		2	3	ID			QB		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			1, 2		
+													
+Segment		REF	Other Payer Purchased Service Provider Identification	Required	3							REF01	1B, EI, G2
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			1B, EI, G2		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2330F		0	0								
+													
+Loop	Start	L2330G		Optional	1							NM1/NM101	77, FA, LI, TL
+													
+Segment		NM1	Other Payer Service Facility Location	Optional	1							NM101	77, FA, LI, TL
+Element		NM101	Entity Identifier Code	Required		2	3	ID			77, FA, LI, TL		
+Element		NM102	Entity Type Qualifier	Required		1	1	ID			2		
+													
+Segment		REF	Other Payer Service Facility Location Identification	Required	3							REF01	1B, G2
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			1B, G2		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Loop	End	L2330G		0	0								
+													
+Loop	End	L2320		0	0								
+													
+Loop	Start	L2400		Optional	50								
+Segment		LX	Service Line	Required	1								
+Element		LX01	Assigned Number	Required		1	6	N	0				
+													
+Segment		SV1	Professional Service	Required	1								
+Element		SV101	Composite Medical Procedure Identifier	Required				Comp					
+Sub-Element		SV1011	Product Service ID Qualifier	Required		2	2	ID			HC, ZZ		
+Sub-Element		SV1012	Product Service ID	Required		1	48	AN					
+Sub-Element		SV1013	Procedure Modifier	Optional		2	2	AN					
+Sub-Element		SV1014	Procedure Modifier 2	Optional		2	2	AN					
+Sub-Element		SV1015	Procedure Modifier 3	Optional		2	2	AN					
+Sub-Element		SV1016	Procedure Modifier 4	Optional		2	2	AN					
+Element		SV102	Monetary Amount	Required		1	18	R					
+Element		SV103	Unit Basis for Measurement Code	Required		2	2	ID			MJ, UN		
+Element		SV104	Quantity	Required		1	15	R					
+Element		SV105	Facility Code Value	Optional		1	2	AN			11, 12, 21, 22, 23, 24, 25, 26, 31, 32, 33, 34, 41, 42, 50, 51, 52, 53, 54, 55, 56, 60, 61, 62, 65, 71, 72, 81, 99		
+Element		SV107	Composite Diagnosis Code Pointer	Optional				Comp					
+Sub-Element		SV1071	Diagnosis Code Pointer	Required		1	2	N	0				
+Sub-Element		SV1072	Diagnosis Code Pointer 2	Optional		1	2	N	0				
+Sub-Element		SV1073	Diagnosis Code Pointer 3	Required		1	2	N	0				
+Sub-Element		SV1074	Diagnosis Code Pointer 4	Optional		1	2	N	0				
+Element		SV109	Condition Response Code	Optional		1	1	ID			Y		
+Element		SV111	Condition Response Code 2	Optional		1	1	ID			Y		
+Element		SV112	Condition Response Code 3	Optional		1	1	ID			Y		
+Element		SV115	Copay Status Code	Optional		1	1	ID			0		
+													
+Segment		SV5	Durable Medical Equipment Service	Optional	1								
+Element		SV501	Composite Medical Procedure Identifier	Required				Comp					
+Sub-Element		SV5011	Product Service ID Qualifier	Required		2	2	ID			HC		
+Sub-Element		SV5012	Product Service ID	Required		1	48	AN					
+Element		SV502	Unit Basis for Measurement Code	Required		2	2	ID			DA		
+Element		SV503	Quantity	Required		1	15	R					
+Element		SV504	Monetary Amount	Optional		1	18	R					
+Element		SV505	Monetary Amount 2	Optional		1	18	R					
+Element		SV506	Frequency Code	Optional		1	1	ID			1, 4, 6		
+													
+Segment		CR5	Home Oxygen Therapy Information	Optional	1								
+Element		CR501	Certification Type Code	Required		1	1	ID			I, R, S		
+Element		CR502	Quantity	Required		1	15	R					
+Element		CR510	Quantity 2	Optional		1	15	R					
+Element		CR511	Quantity 3	Optional		1	15	R					
+Element		CR512	Oxygen Test Condition Code	Required		1	1	ID			E, R, S		
+Element		CR513	Oxygen Test Findings Code	Optional		1	1	ID			1		
+Element		CR514	Oxygen Test Findings Code 2	Optional		1	1	ID			2		
+Element		CR515	Oxygen Test Findings Code 3	Optional		1	1	ID			3		
+													
+Segment		CRC	DMERC Condition Indicator	Optional	2								
+Element		CRC01	Code Category	Required		2	2	ID			09, 11		
+Element		CRC02	Condition Response Code	Required		1	1	ID			Y, N		
+Element		CRC03	Condition Indicator	Required		2	2	ID			37, 38, AL, P1, ZV		
+Element		CRC04	Condition Indicator 2	Optional		2	2	ID			37, 38, AL, P1, ZV		
+Element		CRC05	Condition Indicator 3	Optional		2	2	ID			37, 38, AL, P1, ZV		
+Element		CRC06	Condition Indicator 4	Optional		2	2	ID			37, 38, AL, P1, ZV		
+Element		CRC07	Condition Indicator 5	Optional		2	2	ID			37, 38, AL, P1, ZV		
+													
+Segment		DTP	 Service Date	Required	1							DTP01	472
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			472		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8, RD8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Test Date	Optional	2							DTP01	738, 739
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			738, 739		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		DTP	 Oxygen Saturation Arterial Blood Gas Test	Optional	3							DTP01	119, 480, 481
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			119, 480, 481		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Segment		MEA	Test Result	Optional	20								
+Element		MEA01	Measurement Reference ID Code	Required		2	2	ID			OG, TR		
+Element		MEA02	Measurement Qualifier	Required		1	3	ID			HT, R1, R2, R3, R4, ZO, GRA		
+Element		MEA03	Measurement Value	Required		1	20	R					
+													
+Segment		REF	Line Item Control Number	Optional	1							REF01	6R
+Element		REF01	Reference Identification Qualifier	Required		2	3	ID			6R		
+Element		REF02	Reference Identification	Required		1	30	AN					
+													
+Segment		NTE	Line Note	Optional	1								
+Element		NTE01	Note Reference Code	Required		3	3	ID			ADD, DCP, PMT, TPO		
+Element		NTE02	Description	Required		1	80	AN					
+													
+Loop	Start	L2430		Optional	25								
+													
+Segment		SVD	Line Adjudication Information	Optional	1								
+Element		SVD01	Identification Code	Required		2	80	AN					
+Element		SVD02	Monetary Amount	Required		1	18	R					
+Element		SVD03	Composite Medical Procedure Identifier	Required				Comp					
+Sub-Element		SVD031	Product Service ID Qualifier	Required		2	2	ID			HC, IV, ZZ		
+Sub-Element		SVD032	Product Service ID	Required		1	48	AN					
+Sub-Element		SVD033	Procedure Modifier	Optional		2	2	AN					
+Sub-Element		SVD034	Procedure Modifier	Optional		2	2	AN					
+Sub-Element		SVD035	Procedure Modifier	Optional		2	2	AN					
+Sub-Element		SVD036	Procedure Modifier	Optional		2	2	AN					
+Sub-Element		SVD037	Description	Optional		1	80	AN					
+Element		SVD05	Quantity	Required		1	15	R					
+Element		SVD06	Assigned Number	Optional		1	6	N	0				
+													
+Segment		CAS	Line Adjustment	Optional	99								
+Element		CAS01	Claim Adjustment Group Code	Required		1	2	ID			CO, CR, OA, PI, PR		
+Element		CAS02	Claim Adjustment Reason Code	Required		1	5	ID					
+Element		CAS03	Monetary Amount	Required		1	18	R					
+Element		CAS04	Quantity	Optional		1	15	R					
+Element		CAS05	Claim Adjustment Reason Code 2	Optional		1	5	ID					
+Element		CAS06	Monetary Amount 2	Optional		1	18	R					
+Element		CAS07	Quantity 2	Optional		1	15	R					
+Element		CAS08	Claim Adjustment Reason Code 3	Optional		1	5	ID					
+Element		CAS09	Monetary Amount 3	Optional		1	18	R					
+Element		CAS10	Quantity 3	Optional		1	15	R					
+Element		CAS11	Claim Adjustment Reason Code 4	Optional		1	5	ID					
+Element		CAS12	Monetary Amount 4	Optional		1	18	R					
+Element		CAS13	Quantity 4	Optional		1	15	R					
+Element		CAS14	Claim Adjustment Reason Code 5	Optional		1	5	ID					
+Element		CAS15	Monetary Amount 5	Optional		1	18	R					
+Element		CAS16	Quantity 5	Optional		1	15	R					
+Element		CAS17	Claim Adjustment Reason Code 6	Optional		1	5	ID					
+Element		CAS18	Monetary Amount 6	Optional		1	18	R					
+Element		CAS19	Quantity 6	Optional		1	15	R					
+													
+Segment		DTP	Line Adjudication Date	Required	1						DTP01	573	
+Element		DTP01	Date Time Qualifier	Required		3	3	ID			573		
+Element		DTP02	Date Time Period Format Qualifier	Required		2	3	ID			D8		
+Element		DTP03	Date Time Period	Required		1	35	AN					
+													
+Loop	End	L2430		0	0								
+													
+Loop	End	L2400		0	0								
+													
+Loop	End	L2300		0	0								
+													
+Loop	End	L2000C		0	0								
+													
+													
+Segment		SE	Transaction Set Trailer	Required	1								
+Element		SE01	Number of Included Segments	Required		1	10	N	0				
+Element		SE02	Transaction Set Control Number	Required		4	9	AN					
+													
+Segment		GE	Functional Group Trailer	Required	1								
+Element		GE01	Number of Transaction Sets Included	Required		1	6	N	0				
+Element		GE02	Group Control Number	Required		1	9	N	0				
+													
+Segment		IEA	Interchange Control Trailer	Required	1								
+Element		IEA01	Number of Included Functional Groups	Required		1	5	N	0				
+Element		IEA02	Interchange Control Number	Required		9	9	N	0				
+													
+													
+Loop	End	ediroot		0	0								
