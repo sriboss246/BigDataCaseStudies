@@ -1,4 +1,4 @@
-package com.cts.util.tools.mainjob;
+package com.org.util.tools.mainjob;
 
 public final class Constants {
 	private Constants() {

@@ -1,4 +1,4 @@
-package com.cts.util.tools.xmltoavro;
+package com.org.util.tools.xmltoavro;
 
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;

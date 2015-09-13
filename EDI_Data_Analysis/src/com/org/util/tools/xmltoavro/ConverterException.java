@@ -1,4 +1,4 @@
-package com.cts.util.tools.xmltoavro;
+package com.org.util.tools.xmltoavro;
 
 public class ConverterException extends RuntimeException {
     public ConverterException(String message) { super(message); }

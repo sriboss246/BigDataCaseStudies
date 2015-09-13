@@ -1,4 +1,4 @@
-package com.cts.edi.util.tools;
+package com.org.edi.util.tools;
 
 public class EdiNode {
 	private String absPath;
